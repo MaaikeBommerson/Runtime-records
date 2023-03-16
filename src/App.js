@@ -1,10 +1,9 @@
-import Ding from './components/Ding'
+import Header1 from './components/atoms/Header1'
 
 const App = () => {
   return (
     <>
-      <Ding text="Hello" display={true}/>
-      <Ding text="World" display={false} />
+      <Header1 text="Hi there" ClassName=""></Header1>
     </>
   )
 }

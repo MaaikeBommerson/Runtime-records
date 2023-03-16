@@ -1,0 +1,26 @@
+/** CUSTOM PROPERTIES **/
+:root {
+  /** COLOR **/
+  @each $ct, $cd in $color-types {
+    /*! #{$cd} */
+    @each $style in $colors {
+      $type: map-get($style, 'type');
+      /*! #{$type} */
+      $shades: rootColor($type, $ct, $style);
+      @each $shade, $value in $shades {
+        #{$shade}: #{$value};
+      }
+    }
+  }
+
+  /** FONT **/
+  @each $entry in $fonts {
+    $type: map-get($entry, 'type');
+    $q: quote($type);
+    //--#{$type}: '#{$type}';
+    --#{$type}: '#{$q}';
+  }
+
+  --all-transition: all 0.4s ease;
+  --box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.45);
+}
