@@ -314,4 +314,29 @@ h5 {
 h6 {
   font-family: "heading";
   font-size: 1.375rem;
+}
+
+.Image {
+  width: 200px;
+}
+.BlackLogo {
+  height: 2em;
+  display: flex;
+}
+
+.WhiteLogo {
+  height: 2em;
+  display: flex;
+}
+
+.OrangeLogo {
+  height: 4em;
+  display: flex;
+}
+
+.Icon {
+  font-size: 50px;
+}
+.Input {
+  border: 1px solid black;
 }/*# sourceMappingURL=main.css.map */

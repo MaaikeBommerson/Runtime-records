@@ -1,36 +1,13 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-/// TODO: Define props for Image
-const Image = (props) => {
+/// TODO: Define props for Header1
+const Image = ({className, src}) => {
 
     return(
-        <div data-testid={ props.testID }
-             data-object-type={ props.type ?? ""}
-             className={ `Image ${props.size} more utility classes` }>
-        </div>
+        <img className={className} src={src}/>
     )
 
-}
-
-/// TODO: add more utility classes if needed!
-
-/// TODO: Adjust and extend!
-const sizes = [
-    "small",
-    "medium",
-    "large"
-]
-
-const exceptionClasses = [
-    "button",
-    "regular"
-]
-
-Image.propTypes = {
-    testID: PropTypes.string,
-    type: PropTypes.oneOf(exceptionClasses),
-    size: PropTypes.oneOf(sizes),
 }
 
 export default Image

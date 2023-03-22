@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-/// TODO: Define props for Paragraph
-const Paragraph = (props) => {
+/// TODO: Define props for Header2
+const Paragraph = ({content}) => {
 
     return(
-        <div data-testid={ props.testID }
-             data-object-type={ props.type ?? ""}
-             className={ `Paragraph ${props.size} more utility classes` }>
-        </div>
+        <p>{content}</p>
     )
 
 }
@@ -16,21 +13,12 @@ const Paragraph = (props) => {
 /// TODO: add more utility classes if needed!
 
 /// TODO: Adjust and extend!
-const sizes = [
-    "small",
-    "medium",
-    "large"
-]
 
-const exceptionClasses = [
-    "button",
-    "regular"
-]
+
+const content = "Lorem ipsum verhaal waar ik niks van begrijp waar het over gaat en blabla bla"
 
 Paragraph.propTypes = {
-    testID: PropTypes.string,
-    type: PropTypes.oneOf(exceptionClasses),
-    size: PropTypes.oneOf(sizes),
+    content: content
 }
 
 export default Paragraph

@@ -2,13 +2,12 @@ import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 /// TODO: Define props for Button
-const Button = (props) => {
+const Button = ({text, onClick}) => {
 
     return(
-        <div data-testid={ props.testID }
-             data-object-type={ props.type ?? ""}
-             className={ `Button ${props.size} more utility classes` }>
-        </div>
+        <button ClassName="button" onClick= {onClick}>
+            {text}
+        </button>
     )
 
 }

@@ -1,17 +1,14 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-/// TODO: Define props for Subtitle
-const Subtitle = (props) => {
-
-    return(
-        <div data-testid={ props.testID }
-             data-object-type={ props.type ?? ""}
-             className={ `Subtitle ${props.size} more utility classes` }>
-        </div>
+const Subtitle = ({ text }) => {
+    
+  
+    return (
+        <h3>{text}</h3>
     )
-
-}
+    }
+  
 
 /// TODO: add more utility classes if needed!
 

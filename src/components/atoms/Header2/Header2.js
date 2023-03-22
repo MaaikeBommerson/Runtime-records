@@ -2,35 +2,12 @@ import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 /// TODO: Define props for Header2
-const Header2 = (props) => {
+const Header2 = ({text}) => {
 
     return(
-        <div data-testid={ props.testID }
-             data-object-type={ props.type ?? ""}
-             className={ `Header2 ${props.size} more utility classes` }>
-        </div>
+        <h2>{text}</h2>
     )
 
-}
-
-/// TODO: add more utility classes if needed!
-
-/// TODO: Adjust and extend!
-const sizes = [
-    "small",
-    "medium",
-    "large"
-]
-
-const exceptionClasses = [
-    "button",
-    "regular"
-]
-
-Header2.propTypes = {
-    testID: PropTypes.string,
-    type: PropTypes.oneOf(exceptionClasses),
-    size: PropTypes.oneOf(sizes),
 }
 
 export default Header2
