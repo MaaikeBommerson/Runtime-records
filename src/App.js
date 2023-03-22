@@ -10,6 +10,7 @@ import ShoppingButton from './components/atoms/Shoppingbutton'
 import Image from './components/atoms/Image'
 import PriceTag from './components/atoms/Pricetag'
 import Input from './components/atoms/Input'
+import SearchButton from './components/atoms/Searchbutton'
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <Image className="Image" src= "https://as2.ftcdn.net/v2/jpg/01/13/79/75/1000_F_113797565_7b5L47LqnaZrd59swu0dtkhOFz4KYopV.jpg"></Image>
       <Image className="Image" src="https://img.kytary.com/eshop_nl/stredni_v4x/na/636706319220900000/a3be06e1/52854114/serato-performance-vinyl-bk.jpg"></Image>
       <Input type="text" placeholder="Search"  />
+      <SearchButton />
 
     </>
   )

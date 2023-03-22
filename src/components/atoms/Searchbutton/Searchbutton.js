@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Icon from '../Icon'
+import DiscPayoff from '../../../resources/img/disc-payoff.svg'
 
 /// TODO: Define props for Button
-const Search = () => {
+const SearchButton = () => {
 
     return(
-        <button className="ShoppingButton">
-            <Icon />
+        <button className="Searchbutton">
+            <img src={DiscPayoff}/>
         </button>
     )
 }

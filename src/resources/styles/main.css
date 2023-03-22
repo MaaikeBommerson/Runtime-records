@@ -339,4 +339,10 @@ h6 {
 }
 .Input {
   border: 1px solid black;
+}
+.Searchbutton {
+  border-radius: 100%;
+  border: none;
+  background-color: white;
+  width: 3em;
 }/*# sourceMappingURL=main.css.map */

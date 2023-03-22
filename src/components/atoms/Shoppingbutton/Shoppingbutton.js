@@ -5,6 +5,7 @@ import Icon from '../Icon'
 /// TODO: Define props for Button
 const ShoppingButton = () => {
 
+    
     return(
         <button className="ShoppingButton">
             <Icon />
