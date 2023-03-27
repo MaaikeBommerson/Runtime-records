@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 library.add(fas, fab)
 
 
-const Icon = () => {
-    const icon = 'fa-cart-shopping'
+const Icon = ({icon}) => {
+    
+
     return (
           <FontAwesomeIcon
               icon={ icon }
@@ -15,5 +16,7 @@ const Icon = () => {
     )
 }
 
+
+// werkt niet, maar in ieder geval nu zonder foutmeldingen
 
 export default Icon

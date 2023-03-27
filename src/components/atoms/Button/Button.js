@@ -1,14 +1,26 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-/// TODO: Define props for Button
-const Button = ({text, onClick}) => {
+import Icon from '../Icon'
+import IconRow from '../../atoms/Iconrow'
 
+
+/// TODO: Define props for Button
+const Button = ({text, onClick, icon}) => {
+
+    if (text === 'icon') {
+            return(
+                <button classname= "Iconbutton" onClick= {onClick}>
+                <Icon icon= {icon}/>
+                </button>
+            )
+    } 
+    else {
     return(
-        <button ClassName="button" onClick= {onClick}>
-            {text}
+        <button className="Textbutton" onClick= {onClick}>
+            {text} 
         </button>
-    )
+    )}
 
 }
 
