@@ -7,25 +7,30 @@ import Link from '../../atoms/Link'
 import IconRow from '../../atoms/Iconrow'
 
 
-/// TODO: Define props for Footerblock
-const Footerblock = () => {
+
+const Socialblock = () => {
 
     return(
-        <div className='Iconblock'>
+        <div className='Socialblock'>
             <Header3 text='runtime records'/>
             <div>
+                <Icon icon= {IconRow.mail}/>
                 <Link link='maillink' href='www.google.com'/>
             </div>
             <div>
+                <Icon icon= {IconRow.website}/>
                 <Link link='Website' href='www.google.com'/>
             </div>
             <div>
+                <Icon icon= {IconRow.facebook}/>
                 <Link link='Facebook' href='www.google.com'/>
             </div>
             <div>
+                <Icon icon= {IconRow.twitter}/>
                 <Link link='twitter' href='www.google.com'/>
             </div>
             <div>
+                <Icon icon= {IconRow.instagram}/>
                 <Link link='Instagram' href='www.google.com'/>
             </div>
         </div>
@@ -33,24 +38,6 @@ const Footerblock = () => {
 
 }
 
-/// TODO: add more utility classes if needed!
 
-/// TODO: Adjust and extend!
-const sizes = [
-    "small",
-    "medium",
-    "large"
-]
 
-const exceptionClasses = [
-    "button",
-    "regular"
-]
-
-Footerblock.propTypes = {
-    testID: PropTypes.string,
-    type: PropTypes.oneOf(exceptionClasses),
-    size: PropTypes.oneOf(sizes),
-}
-
-export default Footerblock
+export default Socialblock
