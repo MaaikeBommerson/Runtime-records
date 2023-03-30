@@ -10,14 +10,14 @@ const Button = ({text, onClick, icon}) => {
 
     if (text === 'icon') {
             return(
-                <button classname= "Iconbutton" onClick= {onClick}>
+                <button className= "Iconbutton Shadow" onClick= {onClick}>
                 <Icon icon= {icon}/>
                 </button>
             )
     } 
     else {
     return(
-        <button className="Textbutton" onClick= {onClick}>
+        <button className="Textbutton bg-highlight Shadow" onClick= {onClick}>
             {text} 
         </button>
     )}

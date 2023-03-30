@@ -12,8 +12,8 @@ const Logo = ({color}) => {
     if (color === "white") {
         return(
         <div className="WhiteLogo">
-            <img src= {DiscPayoffWhite}/>
-            <img src= {RuntimeRecordsWhite}/>
+            <img classsName='Logo' src= {DiscPayoffWhite}/>
+            <img className='Name' src= {RuntimeRecordsWhite}/>
         </div>
         )
     } 
@@ -22,8 +22,8 @@ const Logo = ({color}) => {
         if (color == "black") {
             return(
             <div className= "BlackLogo">
-                <img src= {DiscPayoff}/>
-                <img src= {RuntimeRecords}/>
+                <img className='Logo' src= {DiscPayoff}/>
+                <img className='Name' src= {RuntimeRecords}/>
             </div> 
             )
         } 
@@ -31,8 +31,8 @@ const Logo = ({color}) => {
         else  {
         return(
         <div className= "OrangeLogo">
-            <img src= {RecordStoreDay}/>
-            <img src= {DiscPayoffWhite}/>
+            <img className='Name' src= {RecordStoreDay}/>
+            <img className='Logo' src= {DiscPayoffWhite}/>
         </div> 
         )
         }

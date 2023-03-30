@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import Logo from '../../atoms/Logo'
-import ShoppingButton from '../../atoms/Shoppingbutton'
 import Icon from '../../atoms/Icon'
+import Button from '../../atoms/Button'
+
+import Menubutton from '../../atoms/Menubutton/'
 
 import IconRow from '../../atoms/Iconrow'
 
@@ -13,9 +15,9 @@ const Nav = () => {
     return(
         <nav>
             <Logo color="black"/>
-            <div className="Navbar">
-            <Icon icon= {IconRow.shoppingcart} />
-            <Icon icon= {IconRow.menu} />
+            <div className='Navbar'>
+                <Button text='icon' onClick= {() => alert('Klik klik!')} icon= {IconRow.shoppingcart}/>
+                <Menubutton/>
             </div>
        </nav>
     )

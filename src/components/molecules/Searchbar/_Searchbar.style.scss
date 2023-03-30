@@ -1,5 +1,13 @@
 .Searchbar {
+  border: 2px solid rgb(0,0,0,0.4);
+  border-radius: 40px;
+  width: 25em;
+  padding: 0;
+  padding-left: 1em;
 
+  display: flex;
+  justify-content: baseline;
+  margin: 0 auto;
 
 
   // XS - Phone

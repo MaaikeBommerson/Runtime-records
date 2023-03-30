@@ -1,6 +1,12 @@
 .Filter {
 
 
+  button {
+  background-color: black;
+  color: white;
+  width: 2.5em;
+  height: 2.5em;
+  }
 
   // XS - Phone
   @media (max-width: 480px) {

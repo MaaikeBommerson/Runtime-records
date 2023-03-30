@@ -8,7 +8,7 @@ import IconRow from '../../atoms/Iconrow'
 const Filter = () => {
 
     return(
-        <div>
+        <div className='Filter'>
             <Button text='icon' icon= {IconRow.filter} onCLick= {() => alert('Klik klik!')}/>
             <Button text='icon' icon= {IconRow.save} onClick= {() => alert('Klik klik!')}/>
         </div>

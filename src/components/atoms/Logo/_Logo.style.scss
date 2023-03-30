@@ -1,16 +1,39 @@
 .BlackLogo {
-    height: 2em;
+    height: 2.5em;
     display: flex;
+    width: 15em;
+
+    .Logo {
+      margin: 0.2em;
+    }
+    .Name {
+      height: 1.5em;
+      margin: 0.4em;
+    }
 }
 
 .WhiteLogo {
-  height: 2em;
+  height: 2.5em;
   display: flex;
+  width: 15em;
+
+  .Logo {
+    margin: 0.2em;
+  }
+  .Name {
+    height: 1.5em;
+    margin: 0.4em;
+  }
 }
 
 .OrangeLogo {
-  height: 4em;
+  height: 5em;
   display: flex;
+
+  .Logo {
+    margin: 0.2em;
+  }
+  .Name {
+    margin: 0.4em;
+  }
 }
-
-

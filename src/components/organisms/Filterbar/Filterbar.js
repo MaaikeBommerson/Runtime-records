@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-/// TODO: Define props for Menuitem
-const Menuitem = (props) => {
+import SearchBar from '../../molecules/Searchbar/Searchbar'
+import Filter from '../../molecules/Filter'
+
+/// TODO: Define props for Filterbar
+const Filterbar = () => {
 
     return(
-        <div data-testid={ props.testID }
-             data-object-type={ props.type ?? ""}
-             className={ `Menuitem ${props.size} more utility classes` }>
+        <div className='Filterbar'>
+            <SearchBar />
+            <Filter />
         </div>
     )
 
@@ -27,10 +30,10 @@ const exceptionClasses = [
     "regular"
 ]
 
-Menuitem.propTypes = {
+Filterbar.propTypes = {
     testID: PropTypes.string,
     type: PropTypes.oneOf(exceptionClasses),
     size: PropTypes.oneOf(sizes),
 }
 
-export default Menuitem
+export default Filterbar

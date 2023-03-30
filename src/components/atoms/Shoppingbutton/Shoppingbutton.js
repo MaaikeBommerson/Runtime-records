@@ -11,7 +11,7 @@ const ShoppingButton = () => {
     return(
         <div className="ShoppingButton">
             <Icon icon= {IconRow.arrow}/>
-            <button >
+            <button>
                 <Icon icon= {IconRow.shoppingcart} />
             </button>
         </div>

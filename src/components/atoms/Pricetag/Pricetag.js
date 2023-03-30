@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const PriceTag = ({price}) => {
 
     return(
-        <div className="price">{price}</div>
+        <div className="price bg-highlight Shadow">{price}</div>
     )
 }
 

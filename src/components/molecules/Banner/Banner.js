@@ -16,7 +16,7 @@ const Banner = () => {
 
     return(
     <div className='Banner'>
-        <div>
+        <div className='Infoblock'>
             <Header2 text= 'Adult life'/>
             <Header1 text='Book of Curses'/>
             <Paragraph content='This blistering punk-rock debut from a 55-year-old 
@@ -25,15 +25,14 @@ const Banner = () => {
                             crafted with an insatiable verve and an almost
                             triumphant fury.' />
             <Subtitle text= 'post punk, indie, punk'/>
-            <div>
+            <div className='Buttonbar'>
                 <ShoppingButton/>
                 <Button text='Read more'/>
             </div>
         </div>
-        <div>
+        <div className='BannerLp'>
             <PriceTag price="22.50" />
-            <Image className='Cover' src='https://media.s-bol.com/K8rGKporZlRl/550x543.jpg'/>
-            <Image  className='Lp' src= 'https://img.kytary.com/eshop_nl/stredni_v4x/na/636706319220900000/a3be06e1/52854114/serato-performance-vinyl-bk.jpg' />
+            <Image className='Lp' src='https://media.s-bol.com/NPOyPV94QX2/1200x898.jpg'/>
         </div>
     </div>   
     )

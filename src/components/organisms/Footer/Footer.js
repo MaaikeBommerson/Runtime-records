@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import Footerblock from '../../molecules/Footerblock/Footerblock'
 import Socialblock from '../../molecules/Socialblock/Socialblock'
+import Logo from '../../atoms/Logo'
 
 /// TODO: Define props for Footer
 const Footer = (props) => {
@@ -11,6 +12,7 @@ const Footer = (props) => {
         <footer>
             <Socialblock />
             <Footerblock />
+            <Logo color='orange'/>
         </footer>
     )
 

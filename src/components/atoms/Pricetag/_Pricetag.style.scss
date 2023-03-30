@@ -1,6 +1,13 @@
-.Pricetag {
+.price {
+  border-radius: 30px;
+  padding: 0.6em 0.1em;
+  width: 3em;
+  height: 3em;
 
-
+  position:absolute;
+  margin: -1em;
+  // uitvogelen hoe ik price over afbeelding zet
+  
 
   // XS - Phone
   @media (max-width: 480px) {

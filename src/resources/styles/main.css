@@ -288,61 +288,195 @@ body {
 
 h1 {
   font-family: "heading";
-  font-size: 5.625rem;
+  font-size: 3.125rem;
 }
 
 h2 {
   font-family: "heading";
-  font-size: 3.625rem;
+  font-size: 1.5rem;
 }
 
 h3 {
   font-family: "heading";
-  font-size: 2.625rem;
+  font-size: 1.875rem;
 }
 
 h4 {
   font-family: "heading";
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 h5 {
   font-family: "heading";
-  font-size: 1.5rem;
+  font-size: 0.875rem;
 }
 
 h6 {
   font-family: "heading";
-  font-size: 1.375rem;
+  font-size: 1rem;
 }
 
-.Image {
-  width: 200px;
+button {
+  border-radius: 30px;
+  padding: 0.3em 0.5em;
+  margin: 0.5em;
+  border: none;
+}
+
+.Textbutton {
+  padding: 0.3em 1em;
+  border: none;
+  color: white;
+}
+
+img .Cover {
+  height: 10em;
+}
+img .Lp {
+  height: 10em;
+}
+.price {
+  border-radius: 30px;
+  padding: 0.6em 0.1em;
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  margin: -1em;
 }
 .BlackLogo {
-  height: 2em;
+  height: 2.5em;
   display: flex;
+  width: 15em;
+}
+.BlackLogo .Logo {
+  margin: 0.2em;
+}
+.BlackLogo .Name {
+  height: 1.5em;
+  margin: 0.4em;
 }
 
 .WhiteLogo {
-  height: 2em;
+  height: 2.5em;
   display: flex;
+  width: 15em;
+}
+.WhiteLogo .Logo {
+  margin: 0.2em;
+}
+.WhiteLogo .Name {
+  height: 1.5em;
+  margin: 0.4em;
 }
 
 .OrangeLogo {
-  height: 4em;
+  height: 5em;
   display: flex;
 }
+.OrangeLogo .Logo {
+  margin: 0.2em;
+}
+.OrangeLogo .Name {
+  margin: 0.4em;
+}
 
-.Icon {
-  font-size: 50px;
+.Menubutton .Smallbar {
+  background-color: black;
+  border-radius: 20px;
+  height: 0.4em;
+  width: 2em;
+}
+.Menubutton .Longerbar {
+  background-color: black;
+  border-radius: 20px;
+  height: 0.4em;
+  width: 3em;
+  margin: 0.5em 0;
 }
 .Input {
-  border: 1px solid black;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-family: "heading";
+  padding: 0.2em 0.8em;
 }
 .Searchbutton {
   border-radius: 100%;
   border: none;
   background-color: white;
+  padding: 0;
+}
+.Searchbutton img {
   width: 3em;
+}
+nav {
+  width: 100%;
+  height: 3.5em;
+  padding: 0.5em 10%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+nav .Navbar {
+  height: 2em;
+  display: flex;
+  justify-content: flex-end;
+}
+nav .Navbar button {
+  margin: 0.2em 1em;
+}
+nav .Iconbutton {
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  height: 2.2em;
+  width: 2.2em;
+  padding: 0.3em;
+  margin-right: 1em;
+}
+.Banner {
+  background-color: black;
+  margin-top: 3em;
+  padding: 8em 20%;
+  color: white;
+  display: flex;
+}
+.Banner .BannerLp {
+  position: relative;
+  margin-left: 0.5em;
+}
+.Banner .BannerLp .Lp {
+  width: 80em;
+}
+.Banner .Buttonbar {
+  margin: 0.5em 0;
+  display: flex;
+  gap: 40%;
+}
+.Searchbar {
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+  width: 25em;
+  padding: 0;
+  padding-left: 1em;
+  display: flex;
+  justify-content: baseline;
+  margin: 0 auto;
+}
+.Filter button {
+  background-color: black;
+  color: white;
+  width: 2.5em;
+  height: 2.5em;
+}
+.Filterbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  margin: 3em auto;
+}
+.Shadow {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
 }/*# sourceMappingURL=main.css.map */

@@ -2,8 +2,11 @@
   border-radius: 100%;
   border: none;
   background-color: white;
-  width: 3em;
+  padding: 0;
 
+  img {
+    width: 3em;
+  }
 
   // XS - Phone
   @media (max-width: 480px) {

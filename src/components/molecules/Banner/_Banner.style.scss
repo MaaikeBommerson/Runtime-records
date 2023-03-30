@@ -1,6 +1,34 @@
 .Banner {
-  background-image: url('resources/img/runtime-records-backdrop.jpg');
-//waarom werkt dit niet
+  // background-image: url("../../../resources/img/runtime-records-backdrop.jpg");
+  // background-repeat: no-repeat;
+
+  background-color: black;
+  margin-top: 3em;
+  padding: 8em 20%;
+
+  color: white;
+
+  display: flex;
+
+  .BannerLp {
+    position: relative;
+
+    .Lp {
+      width: 80em;
+    }
+    
+    margin-left: 0.5em;
+  
+  }
+  .Buttonbar {
+    margin: 0.5em 0;
+    display: flex;
+    gap: 40%;
+
+  
+  }
+
+
 
   // XS - Phone
   @media (max-width: 480px) {

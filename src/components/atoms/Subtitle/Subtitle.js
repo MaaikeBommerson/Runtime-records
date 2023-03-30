@@ -5,7 +5,7 @@ const Subtitle = ({ text }) => {
     
   
     return (
-        <h3>{text}</h3>
+        <h5 className='fg-highlight'>{text}</h5>
     )
     }
   
