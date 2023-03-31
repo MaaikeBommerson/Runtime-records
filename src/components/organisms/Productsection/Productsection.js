@@ -8,10 +8,17 @@ const Productsection = () => {
 
     return(
        <section className='Productsection'>
-            <Producttile />
-            <Producttile />
-            <Producttile />
-            <Producttile />
+            <div className='Products'>
+                <Producttile />
+                <Producttile />
+                <Producttile />
+                <Producttile />
+
+                <Producttile />
+                <Producttile />
+                <Producttile />
+                <Producttile />
+            </div>
 
             <div className='cijfers'>1 2 3 4</div>
        </section> 

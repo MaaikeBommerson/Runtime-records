@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const Header4 = ({text}) => {
 
     return(
-        <h4>{text}</h4>
+        <h4 className='fg-base-light-50'>{text}</h4>
     )
 
 }

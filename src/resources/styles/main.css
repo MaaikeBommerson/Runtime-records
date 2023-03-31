@@ -337,11 +337,10 @@ img .Lp {
 }
 .price {
   border-radius: 30px;
-  padding: 0.6em 0.1em;
+  padding: 0.7em 0.3em;
   width: 3em;
   height: 3em;
-  position: absolute;
-  margin: -1em;
+  color: white;
 }
 .BlackLogo {
   height: 2.5em;
@@ -370,8 +369,9 @@ img .Lp {
 }
 
 .OrangeLogo {
-  height: 5em;
+  height: 6em;
   display: flex;
+  margin: 2em 0;
 }
 .OrangeLogo .Logo {
   margin: 0.2em;
@@ -393,6 +393,9 @@ img .Lp {
   width: 3em;
   margin: 0.5em 0;
 }
+h2 {
+  margin-bottom: 0;
+}
 .Input {
   border: none;
   border-radius: 30px;
@@ -409,12 +412,16 @@ img .Lp {
 .Searchbutton img {
   width: 3em;
 }
+a {
+  color: white;
+}
 nav {
   width: 100%;
   height: 3.5em;
   padding: 0.5em 10%;
   background-color: white;
   position: fixed;
+  z-index: 1;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -437,9 +444,13 @@ nav .Iconbutton {
   margin-right: 1em;
 }
 .Banner {
+  background-image: url("runtime-records-backdrop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: black;
-  margin-top: 3em;
-  padding: 8em 20%;
+  margin-top: 0;
+  padding: 10em 20%;
+  height: 45em;
   color: white;
   display: flex;
 }
@@ -454,6 +465,31 @@ nav .Iconbutton {
   margin: 0.5em 0;
   display: flex;
   gap: 40%;
+}
+.Banner .price {
+  position: absolute;
+  top: -1em;
+  left: -1em;
+}
+.Producttile {
+  width: 100%;
+  position: relative;
+  margin-top: 2em;
+}
+.Producttile .price {
+  position: absolute;
+  top: -1em;
+  right: -1em;
+}
+.Producttile h4 {
+  font-size: 1.2em;
+}
+.Producttile h5 {
+  text-align: right;
+}
+.Producttile .Shopitem {
+  display: flex;
+  justify-content: space-between;
 }
 .Searchbar {
   border: 2px solid rgba(0, 0, 0, 0.4);
@@ -470,6 +506,56 @@ nav .Iconbutton {
   color: white;
   width: 2.5em;
   height: 2.5em;
+}
+.Footerblock {
+  width: 50%;
+  margin: 0 1.5em;
+}
+.Footerblock .linkblock {
+  margin: 0.8em 0;
+  height: 1.5em;
+}
+.Socialblock {
+  width: 50%;
+  margin: 0 1.5em;
+}
+.Socialblock .sociallink {
+  display: flex;
+  margin: 0.8em;
+}
+.Socialblock .sociallink .Icon {
+  margin-right: 1em;
+  height: 1.5em;
+}
+.Socialblock .sociallink a {
+  padding: 0;
+}
+.Productsection {
+  width: 80%;
+  margin: 0 10%;
+}
+.Productsection .Products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3em;
+  align-items: center;
+}
+.Productsection .cijfers {
+  margin: 2em auto;
+  display: flex;
+  justify-content: center;
+}
+footer {
+  padding: 3em 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+footer .footertext {
+  display: flex;
+  width: 60%;
 }
 .Filterbar {
   display: flex;

@@ -11,21 +11,21 @@ import IconRow from '../../atoms/Iconrow'
 const Footerblock = () => {
 
     return(
-        <div className='Iconblock'>
+        <div className='Footerblock'>
             <Header3 text='runtime records'/>
-            <div>
+            <div className='linkblock'>
                 <Link link='maillink' href='www.google.com'/>
             </div>
-            <div>
+            <div className='linkblock'>
                 <Link link='Website' href='www.google.com'/>
             </div>
-            <div>
+            <div className='linkblock'>
                 <Link link='Facebook' href='www.google.com'/>
             </div>
-            <div>
+            <div className='linkblock'>
                 <Link link='twitter' href='www.google.com'/>
             </div>
-            <div>
+            <div className='linkblock'>
                 <Link link='Instagram' href='www.google.com'/>
             </div>
         </div>

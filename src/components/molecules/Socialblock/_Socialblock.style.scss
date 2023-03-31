@@ -1,5 +1,20 @@
 .Socialblock {
+  width: 50%;
+  margin: 0 1.5em;
 
+  .sociallink {
+    display: flex;
+    margin: 0.8em;
+
+    .Icon {
+      margin-right: 1em;
+      height: 1.5em;
+    }
+
+    a {
+      padding:  0;
+    }
+  }
 
 
   // XS - Phone

@@ -10,8 +10,10 @@ const Footer = (props) => {
 
     return(
         <footer>
-            <Socialblock />
-            <Footerblock />
+            <div className='footertext'>
+                <Socialblock />
+                <Footerblock />
+            </div>
             <Logo color='orange'/>
         </footer>
     )

@@ -13,24 +13,24 @@ const Socialblock = () => {
     return(
         <div className='Socialblock'>
             <Header3 text='runtime records'/>
-            <div>
-                <Icon icon= {IconRow.mail}/>
+            <div className='sociallink'>
+                <Icon className='Icon' icon= {IconRow.mail}/>
                 <Link link='maillink' href='www.google.com'/>
             </div>
-            <div>
-                <Icon icon= {IconRow.website}/>
+            <div className='sociallink'>
+                <Icon className='Icon' icon= {IconRow.website}/>
                 <Link link='Website' href='www.google.com'/>
             </div>
-            <div>
-                <Icon icon= {IconRow.facebook}/>
+            <div className='sociallink'>
+                <Icon className='Icon' icon= {IconRow.facebook}/>
                 <Link link='Facebook' href='www.google.com'/>
             </div>
-            <div>
-                <Icon icon= {IconRow.twitter}/>
+            <div className='sociallink'>
+                <Icon className='Icon' icon= {IconRow.twitter}/>
                 <Link link='twitter' href='www.google.com'/>
             </div>
-            <div>
-                <Icon icon= {IconRow.instagram}/>
+            <div className='sociallink'>
+                <Icon className='Icon' icon= {IconRow.instagram}/>
                 <Link link='Instagram' href='www.google.com'/>
             </div>
         </div>

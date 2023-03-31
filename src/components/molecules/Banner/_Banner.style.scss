@@ -1,14 +1,24 @@
 .Banner {
-  // background-image: url("../../../resources/img/runtime-records-backdrop.jpg");
-  // background-repeat: no-repeat;
+  background-image: url("runtime-records-backdrop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   background-color: black;
-  margin-top: 3em;
-  padding: 8em 20%;
+  margin-top: 0;
+  padding: 10em 20%;
+  height: 45em;
 
   color: white;
 
   display: flex;
+
+  h5 {
+    margin-bottom: 4em;
+  }
+
+  .Infoblock {
+    width: 50%;
+  }
 
   .BannerLp {
     position: relative;
@@ -26,6 +36,12 @@
     gap: 40%;
 
   
+  }
+
+  .price {
+    position:absolute;
+    top: -1em;
+    left: -1em;
   }
 
 

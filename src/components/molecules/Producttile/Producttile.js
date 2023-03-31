@@ -13,12 +13,15 @@ const Producttile = () => {
 
     return(
         <div className= 'Producttile'>
-            <Image className="Image" src= "https://as2.ftcdn.net/v2/jpg/01/13/79/75/1000_F_113797565_7b5L47LqnaZrd59swu0dtkhOFz4KYopV.jpg"/>
             <PriceTag price='22.50'/>
+            <Image className="Image" src= "https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg"/>
+            
             <Subtitle text='Indie, Math rock, Noise rock'/>
             <Header3 text='Spiderland'/>
-            <Header4 text='Slint'/>
-            <ShoppingButton className='orange'/>
+            <div className='Shopitem'> 
+                <Header4 text='Slint' />
+                <ShoppingButton className='orange'/>
+            </div>
         </div>
     )
 

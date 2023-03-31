@@ -5,13 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 library.add(fas, fab)
 
 
-const Icon = ({icon}) => {
+const Icon = ({icon, className}) => {
     
 
     return (
           <FontAwesomeIcon
               icon={ icon }
-              className={`Icon`}
+              className={className} 
           />
     )
 }
