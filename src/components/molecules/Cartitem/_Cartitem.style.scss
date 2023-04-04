@@ -1,0 +1,70 @@
+.Cartitem {
+  margin: 0 20%;
+  padding: 2em 0;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 20%;
+  }
+
+  .Iteminfo {
+    display: flex;
+    gap: 2em;
+
+    .Titles {
+      margin: 2em 1em;
+    }
+  }
+
+  .options {
+    display: flex;
+    gap: 2em;
+    margin: auto 0;
+
+    .price {
+      padding: 1.2em 0.7em;
+      border-radius: 50px;
+      width: 5em;
+      height: 5em;
+
+      h5 {
+        font-size: 1.4em;
+      }
+    }
+
+    .delete {
+      margin:2em 0;
+      size: 5em;
+    }
+  }
+  
+
+
+  // XS - Phone
+  @media (max-width: 480px) {
+
+  }
+
+  // S - Tablet
+  @media (max-width: 768px) {
+
+  }
+
+  // M - Tablet/Laptop
+  @media (max-width: 1024px) {
+
+  }
+
+  // L - High Res
+  @media (max-width: 1200px) {
+
+  }
+
+  // XL - Ultra High Res
+  @media (min-width: 1201px) {
+
+  }
+
+}

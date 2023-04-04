@@ -1,5 +1,6 @@
 footer {
   padding: 3em 10%;
+  margin-top: 5em;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -9,7 +10,10 @@ footer {
 
 .footertext {
   display: flex;
-  width: 60%;
+  width: 50%;
+}
+h3 {
+  font-size: 1.4em;
 }
 
 

@@ -1,0 +1,62 @@
+.Total {
+  margin: 2em 20%;
+
+  .Buttonbar {
+    margin-top: 4em;
+    display: flex;
+    gap: 1em;
+    justify-content: right;
+    
+
+    h4 {
+      font-size: 1em;
+      padding: 0.8em 0.2em;
+    }
+  }
+
+  .Totalprice {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      margin: 0.3em 0;
+    }
+    
+    .price {
+        padding: 1.8em 1em;
+        border-radius: 70px;
+        width: 7em;
+        height: 7em;
+
+        h5 {
+          font-size: 2em;
+        }
+    }
+
+  }
+    // XS - Phone
+    @media (max-width: 480px) {
+
+    }
+
+    // S - Tablet
+    @media (max-width: 768px) {
+
+    }
+
+    // M - Tablet/Laptop
+    @media (max-width: 1024px) {
+
+    }
+
+    // L - High Res
+    @media (max-width: 1200px) {
+
+    }
+
+    // XL - Ultra High Res
+    @media (min-width: 1201px) {
+
+    }
+
+}
