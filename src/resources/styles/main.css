@@ -725,11 +725,7 @@ footer h3 {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 10000;
-  display: none;
-}
-.Menu nav {
-  z-index: 2;
+  z-index: 1000;
 }
 .Menu nav .Name {
   opacity: 0;
@@ -737,8 +733,6 @@ footer h3 {
 .Menu nav .close {
   font-size: 2em;
   margin-top: 0.2em;
-}
-.Menu .close {
   color: black;
   font-size: 3em;
 }

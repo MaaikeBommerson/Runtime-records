@@ -7,9 +7,10 @@ import Logo from '../../atoms/Logo'
 import Icon from '../../atoms/Icon'
 import IconRow from '../../atoms/Iconrow'
 import Button from '../../atoms/Button'
-import Menubutton from '../../atoms/Menubutton/Menubutton'
+
 /// TODO: Define props for Menu
-const Menu = (props) => {
+
+const Menu = () => {
 
     return(
         <div className='Menu'>
@@ -17,7 +18,7 @@ const Menu = (props) => {
             <Logo color='black'/>
             <div className='Navbar'>
                 <Button text='icon' onClick= {() => alert('Klik klik!')} icon= {IconRow.shoppingcart}/>
-                <Menubutton type="menu-open" />
+                <Icon text='icon' icon={IconRow.close}/>
             </div>
             </nav>
             <div className='menuitems'>
@@ -34,21 +35,21 @@ const Menu = (props) => {
 /// TODO: add more utility classes if needed!
 
 /// TODO: Adjust and extend!
-const sizes = [
-    "small",
-    "medium",
-    "large"
-]
+// const sizes = [
+//     "small",
+//     "medium",
+//     "large"
+// ]
 
-const exceptionClasses = [
-    "button",
-    "regular"
-]
+// const exceptionClasses = [
+//     "button",
+//     "regular"
+// ]
 
-Menu.propTypes = {
-    testID: PropTypes.string,
-    type: PropTypes.oneOf(exceptionClasses),
-    size: PropTypes.oneOf(sizes),
-}
+// Menu.propTypes = {
+//     testID: PropTypes.string,
+//     type: PropTypes.oneOf(exceptionClasses),
+//     size: PropTypes.oneOf(sizes),
+// }
 
 export default Menu
