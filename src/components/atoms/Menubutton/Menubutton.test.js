@@ -1,18 +1,22 @@
-import React from 'react'
-import { render, screen } from "@testing-library/react"
+import React from "react";
+import { render, screen } from "@testing-library/react";
 
 /// Preferably each story instead of actual object
-/// TODO: fix test based upon story entries
-import { DefaultMenubutton } from './Menubutton.stories'
+///
+import { ClosedMenu, OpenMenu } from "./HamburgerMenu.stories";
 
-const testID = "Menubutton-" + Math.floor(Math.random()*90000) + 10000
+const testID = "HamburgerMenu-" + Math.floor(Math.random() * 90000) + 10000;
 
-describe("Menubutton", () => {
+describe("HamburgerMenu", () => {
+  it("Can render OpenMenu", () => {
+    render(<OpenMenu testID={testID} />);
+    let defaultCreated = screen.getByTestId(testID);
+    expect(defaultCreated).not.toBeNull();
+  });
 
-    it("Can render Menubutton", () => {
-        render(<DefaultMenubutton testID={ testID } />)
-        let defaultCreated = screen.getByTestId(testID)
-        expect(defaultCreated).not.toBeNull()
-    })
-
-})
+  it("Can render ClosedMenu", () => {
+    render(<ClosedMenu testID={testID} />);
+    let defaultCreated = screen.getByTestId(testID);
+    expect(defaultCreated).not.toBeNull();
+  });
+});

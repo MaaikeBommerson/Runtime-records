@@ -1,7 +1,8 @@
 import './resources/styles/main.css'
 
-import Nav from './components/molecules/Nav'
+import Navigation from './components/organisms/Navigation/Navigation'
 import Footer from './components/organisms/Footer'
+import Menu from './components/organisms/Menu/Menu'
 
 import Home from './components/pages/Home'
 import Detail from './components/pages/Detail'
@@ -12,8 +13,8 @@ const App = () => {
   
   return (
     <>
-    <Nav />
-    <Shoppingcart/>
+    <Navigation />
+    <Home />
     <Footer />
     </>
   )

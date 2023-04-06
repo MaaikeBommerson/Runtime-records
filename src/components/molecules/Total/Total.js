@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import Header1 from '../../atoms/Header1/Header1'
+import Header3 from '../../atoms/Header1/Header1'
 import PriceTag from '../../atoms/Pricetag/Pricetag'
 import ShoppingButton from '../../atoms/Shoppingbutton/Shoppingbutton'
 
@@ -11,7 +11,7 @@ const Total = () => {
     return(
     <div className='Total'>
         <div className='Totalprice'>
-            <Header1 text='Total order'/>
+            <Header3 text='Total order'/>
             <PriceTag />
         </div>
         <div className='Buttonbar fg-highlight'>

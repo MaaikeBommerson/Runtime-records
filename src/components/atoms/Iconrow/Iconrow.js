@@ -12,7 +12,8 @@ const IconRow = {
     facebook : 'fab fa-square-facebook',
     twitter : 'fab fa-twitter',
     instagram : 'fab fa-instagram',
-    delete : 'fas fa-trash-can'
+    delete : 'fas fa-trash-can',
+    close : 'fas fa-x'
   }
 
   export default IconRow

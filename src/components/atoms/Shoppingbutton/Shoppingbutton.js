@@ -12,7 +12,7 @@ const ShoppingButton = ({className}) => {
         return(
         <div className="ShoppingButton orange">
             <Icon  className= 'Arrow fg-highlight' icon= {IconRow.arrow}/>
-            <button className='bg-highlight'>
+            <button className='bg-highlight Shadow'>
                 <Icon className='fg-highlight-light-50' icon= {IconRow.shoppingcart} />
             </button>
         </div>
@@ -22,8 +22,8 @@ const ShoppingButton = ({className}) => {
         return(
 
         <div className="ShoppingButton white">
-            <Icon icon= {IconRow.arrow}/>
-            <button>
+            <Icon icon= {IconRow.arrow} className='Arrow'/>
+            <button className='Shadow'>
                 <Icon icon= {IconRow.shoppingcart} />
             </button>
         </div>

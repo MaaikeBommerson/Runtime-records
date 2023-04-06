@@ -1,6 +1,9 @@
 .ShoppingButton {
+  display: flex;
+  justify-content: space-between;
+
   .Arrow {
-    
+    margin: 1em 0.5em 1em 0;
   }
 
 

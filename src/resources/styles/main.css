@@ -338,6 +338,13 @@ img .Cover {
 img .Lp {
   height: 10em;
 }
+.ShoppingButton {
+  display: flex;
+  justify-content: space-between;
+}
+.ShoppingButton .Arrow {
+  margin: 1em 0.5em 1em 0;
+}
 .price {
   border-radius: 30px;
   color: white;
@@ -381,16 +388,16 @@ img .Lp {
   margin: 0.4em;
 }
 
-.Menubutton {
+.Menudiv {
   margin-top: 0.4em;
 }
-.Menubutton .Smallbar {
+.Menudiv .Smallbar {
   background-color: black;
   border-radius: 20px;
   height: 0.4em;
   width: 1.8em;
 }
-.Menubutton .Longerbar {
+.Menudiv .Longerbar {
   background-color: black;
   border-radius: 20px;
   height: 0.4em;
@@ -452,7 +459,6 @@ nav .Iconbutton {
   background-image: url("runtime-records-backdrop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
   margin-top: 0;
   padding: 10em 15%;
   color: white;
@@ -485,6 +491,11 @@ nav .Iconbutton {
   width: 3em;
   height: 3em;
 }
+.Banner .Arrow {
+  font-size: 1.5em;
+  margin: 0 0.7em;
+  padding: 0.5em 0;
+}
 .Producttile {
   width: 100%;
   position: relative;
@@ -507,6 +518,11 @@ nav .Iconbutton {
 .Producttile .Shopitem {
   display: flex;
   justify-content: space-between;
+}
+.Producttile .ShoppingButton {
+  font-size: 1em;
+  margin-left: 1em;
+  padding: 0.5em 0;
 }
 .Searchbar {
   border: 2px solid rgba(0, 0, 0, 0.4);
@@ -587,7 +603,7 @@ nav .Iconbutton {
   height: 3em;
 }
 .Cartitem {
-  margin: 0 20%;
+  margin: 0;
   padding: 2em 0;
   border-bottom: 1px solid black;
   display: flex;
@@ -622,23 +638,30 @@ nav .Iconbutton {
   size: 5em;
 }
 .Total {
-  margin: 2em 20%;
+  margin: 2em 0%;
 }
 .Total .Buttonbar {
   margin-top: 4em;
   display: flex;
-  gap: 1em;
   justify-content: right;
 }
 .Total .Buttonbar h4 {
-  font-size: 1em;
-  padding: 0.8em 0.2em;
+  font-size: 1.2em;
+  padding: 1.2em 0;
+}
+.Total .Buttonbar .ShoppingButton {
+  margin: 0.5em;
+  font-size: 1.2em;
+}
+.Total .Buttonbar .ShoppingButton .Arrow {
+  font-size: 1.5em;
+  margin: 0.5em 1em;
 }
 .Total .Totalprice {
   display: flex;
   justify-content: space-between;
 }
-.Total .Totalprice h1 {
+.Total .Totalprice h3 {
   margin: 0.3em 0;
 }
 .Total .Totalprice .price {
@@ -694,6 +717,44 @@ footer h3 {
   align-items: center;
   width: 80%;
   margin: 0 10%;
+}
+.Menu {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  display: none;
+}
+.Menu nav {
+  z-index: 2;
+}
+.Menu nav .Name {
+  opacity: 0;
+}
+.Menu nav .close {
+  font-size: 2em;
+  margin-top: 0.2em;
+}
+.Menu .close {
+  color: black;
+  font-size: 3em;
+}
+.Menu .menuitems {
+  margin: 5em 20%;
+}
+.Menu .menuitems h1 {
+  font-size: 3.5em;
+  border-bottom: 1px solid black;
+  padding: 0.5em 0;
+}
+.Home {
+  font-size: 1.2em;
+}
+.Shoppingcart {
+  padding: 5em 20% 5em 20%;
 }
 .Shadow {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);

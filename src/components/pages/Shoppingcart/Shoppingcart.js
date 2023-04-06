@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
+import Header1 from '../../atoms/Header1/Header1'
 import Cartitem from '../../molecules/Cartitem'
 import Total from '../../molecules/Total'
 
@@ -8,14 +9,14 @@ import Total from '../../molecules/Total'
 const Shoppingcart = (props) => {
 
     return(
-        <>
-            <Cartitem />
+        <div className='Shoppingcart'>
+            <Header1 text='Shopping cart'/>
             <Cartitem />
             <Cartitem />
             <Cartitem />
             <Total />
             
-        </>
+        </div>
     )
 
 }
