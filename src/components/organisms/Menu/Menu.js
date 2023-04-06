@@ -10,18 +10,18 @@ import Button from '../../atoms/Button'
 
 /// TODO: Define props for Menu
 
-const Menu = () => {
+const Menu = ({style}) => {
 
     return(
-        <div className='Menu'>
-            <nav className='MenuNav'>
+        <div className='Menu' style={style}>
+            {/* <nav className='MenuNav'>
             <Logo color='black'/>
             <div className='Navbar'>
                 <Button text='icon' onClick= {() => alert('Klik klik!')} icon= {IconRow.shoppingcart}/>
                 <Icon text='icon' icon={IconRow.close} 
                       className='close' onClick= {() => alert('Nu moet eigenlijk het menu sluiten!')}/>
             </div>
-            </nav>
+            </nav> */}
             <div className='menuitems'>
                 <Header1 text='shop'/>
                 <Header1 text='Account'/>
