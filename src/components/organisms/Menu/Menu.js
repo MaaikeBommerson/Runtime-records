@@ -18,7 +18,8 @@ const Menu = () => {
             <Logo color='black'/>
             <div className='Navbar'>
                 <Button text='icon' onClick= {() => alert('Klik klik!')} icon= {IconRow.shoppingcart}/>
-                <Icon text='icon' icon={IconRow.close}/>
+                <Icon text='icon' icon={IconRow.close} 
+                      className='close' onClick= {() => alert('Nu moet eigenlijk het menu sluiten!')}/>
             </div>
             </nav>
             <div className='menuitems'>

@@ -5,13 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 library.add(fas, fab)
 
 
-const Icon = ({icon, className}) => {
+const Icon = ({icon, className, onClick}) => {
     
 
     return (
           <FontAwesomeIcon
               icon={ icon }
               className={className} 
+              onClick= {onClick}
           />
     )
 }

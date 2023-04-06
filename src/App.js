@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
     <Nav />
-    <Menu />
+    {/* <Menu /> */}
     <Home />
     <Footer />
     </>

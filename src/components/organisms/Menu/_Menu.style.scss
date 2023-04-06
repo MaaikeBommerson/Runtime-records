@@ -1,14 +1,13 @@
 .Menu {
-background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white;
 
-position: fixed;
-top: 0;
-left: 0;
-bottom: 0;
-right: 0;
-z-index: 1000;
-
-
+display: none;
 
 nav {
   
@@ -18,12 +17,13 @@ nav {
 
   .close {
     font-size: 2em;
-    margin-top: 0.2em;
+    margin: 0.2em 0.2em 0.2em 0.35em;
     color: black;
-    font-size: 3em;
+    font-size: 2em;
   }
-
 }
+
+
 
 .menuitems {
   margin: 5em 20%;

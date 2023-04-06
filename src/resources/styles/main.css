@@ -404,6 +404,10 @@ img .Lp {
   width: 2.6em;
   margin: 0.3em 0;
 }
+.Menudiv:hover .Menu {
+  display: block;
+}
+
 h2 {
   margin-bottom: 0;
   padding: 0;
@@ -460,7 +464,7 @@ nav .Iconbutton {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 0;
-  padding: 10em 15%;
+  padding: 10em 20%;
   color: white;
   display: flex;
 }
@@ -472,7 +476,7 @@ nav .Iconbutton {
 }
 .Banner .BannerLp {
   position: relative;
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 .Banner .BannerLp .Lp {
   width: 30em;
@@ -719,22 +723,23 @@ footer h3 {
   margin: 0 10%;
 }
 .Menu {
-  background-color: white;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 1000;
+  background-color: white;
+  display: none;
 }
 .Menu nav .Name {
   opacity: 0;
 }
 .Menu nav .close {
   font-size: 2em;
-  margin-top: 0.2em;
+  margin: 0.2em 0.2em 0.2em 0.35em;
   color: black;
-  font-size: 3em;
+  font-size: 2em;
 }
 .Menu .menuitems {
   margin: 5em 20%;
