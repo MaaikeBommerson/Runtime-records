@@ -1,34 +1,33 @@
 import { useState, useEffect } from 'react'
+import { Outlet, Link } from "react-router-dom"
+
 import PropTypes from 'prop-types'
 
 import Header1 from '../../atoms/Header1'
 
 import Logo from '../../atoms/Logo'
 import Icon from '../../atoms/Icon'
+
 import IconRow from '../../atoms/Iconrow'
 import Button from '../../atoms/Button'
+
 
 /// TODO: Define props for Menu
 
 const Menu = ({style}) => {
 
     return(
+        <>
         <div className='Menu' style={style}>
-            {/* <nav className='MenuNav'>
-            <Logo color='black'/>
-            <div className='Navbar'>
-                <Button text='icon' onClick= {() => alert('Klik klik!')} icon= {IconRow.shoppingcart}/>
-                <Icon text='icon' icon={IconRow.close} 
-                      className='close' onClick= {() => alert('Nu moet eigenlijk het menu sluiten!')}/>
-            </div>
-            </nav> */}
             <div className='menuitems'>
-                <Header1 text='shop'/>
-                <Header1 text='Account'/>
-                <Header1 text='Info'/>
-                <Header1 text='Contact'/>
+                <Link to='/Home'><Header1 text='Shop'/></Link>
+                <Link to='/Shoppingcart'><Header1 text='Account'/></Link>
+                <Link to='/Detail'><Header1 text='Info'/></Link>
+                <Link to='/Detail'><Header1 text='Contact'/></Link>
             </div>
         </div>
+        <Outlet />
+        </>
     )
 
 }

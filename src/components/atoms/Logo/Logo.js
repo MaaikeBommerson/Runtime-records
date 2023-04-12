@@ -7,7 +7,8 @@ import RuntimeRecordsWhite from '../../../resources/img/runtime-records-logo-whi
 import RuntimeRecords from '../../../resources/img/runtime-records-logo.svg'
 
 /// TODO: Define props for Logo
-const Logo = ({color}) => {
+const Logo = ({color, style, active}) => {
+
 
     if (color === "white") {
         return(
@@ -23,7 +24,9 @@ const Logo = ({color}) => {
             return(
             <div className= "BlackLogo">
                 <img className='Logo' src= {DiscPayoff}/>
-                <img className='Name' src= {RuntimeRecords}/>
+                <img className='Name' src= {RuntimeRecords} 
+                     style={{display: active ? 'none' : 'block'}}
+                    />
             </div> 
             )
         } 

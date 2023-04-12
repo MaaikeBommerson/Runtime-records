@@ -1,32 +1,18 @@
 .Menu {
   position: fixed;
-  top: 3em;
+  top: 3.5em;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 1000;
   background-color: white;
 
-// display: none;
-
-nav {
-  
-  .Name {
-    opacity: 0;
-  }
-
-  .close {
-    font-size: 2em;
-    margin: 0.2em 0.2em 0.2em 0.35em;
-    color: black;
-    font-size: 2em;
-  }
-}
-
-
-
 .menuitems {
   margin: 5em 20%;
+
+  a {
+    color: black;
+  }
 
   h1 {
     font-size: 3.5em;

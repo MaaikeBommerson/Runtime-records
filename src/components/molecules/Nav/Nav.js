@@ -12,12 +12,17 @@ import IconRow from '../../atoms/Iconrow'
 /// TODO: Define props for Nav
 const Nav = () => {
 
+    const [isActive, setIsActive] = useState(false)
+
+    const handleClick = () => {
+      setIsActive(current => !current) }
+
     return(
         <nav>
-            <Logo color="black"/>
+            <Logo color="black" active= {isActive}/>
             <div className='Navbar'>
                 <Button text='icon' onClick= {() => alert('Klik klik!')} icon= {IconRow.shoppingcart}/>
-                <Menubutton type='menu-closed'/>
+                <Menubutton type='menu-closed' Clickhandler= {handleClick}/>
             </div>
        </nav>
     )

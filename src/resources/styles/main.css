@@ -405,6 +405,13 @@ img .Lp {
   margin: 0.3em 0;
 }
 
+.close {
+  font-size: 2em;
+  margin: 0.2em 0.2em 0.2em 0.35em;
+  color: black;
+  font-size: 2em;
+}
+
 h2 {
   margin-bottom: 0;
   padding: 0;
@@ -721,24 +728,18 @@ footer h3 {
 }
 .Menu {
   position: fixed;
-  top: 3em;
+  top: 3.5em;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 1000;
   background-color: white;
 }
-.Menu nav .Name {
-  opacity: 0;
-}
-.Menu nav .close {
-  font-size: 2em;
-  margin: 0.2em 0.2em 0.2em 0.35em;
-  color: black;
-  font-size: 2em;
-}
 .Menu .menuitems {
   margin: 5em 20%;
+}
+.Menu .menuitems a {
+  color: black;
 }
 .Menu .menuitems h1 {
   font-size: 3.5em;

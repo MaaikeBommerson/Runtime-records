@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 library.add(fas, fab)
 
 
-const Icon = ({icon, className, onClick}) => {
+const Icon = ({icon,className,onClick,style}) => {
     
 
     return (
@@ -13,6 +13,7 @@ const Icon = ({icon, className, onClick}) => {
               icon={ icon }
               className={className} 
               onClick= {onClick}
+              style= {style}
           />
     )
 }
