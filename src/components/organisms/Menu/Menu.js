@@ -26,7 +26,7 @@ const Menu = ({style}) => {
                 <Link to='/Detail'><Header1 text='Contact'/></Link>
             </div>
         </div>
-        <Outlet />
+      
         </>
     )
 

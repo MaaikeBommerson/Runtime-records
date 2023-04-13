@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Outlet, Link } from "react-router-dom"
 import PropTypes from 'prop-types'
 
 import Logo from '../../atoms/Logo'
@@ -21,7 +22,9 @@ const Nav = () => {
         <nav>
             <Logo color="black" active= {isActive}/>
             <div className='Navbar'>
-                <Button text='icon' onClick= {() => alert('Klik klik!')} icon= {IconRow.shoppingcart}/>
+                <Link to='/Shoppingcart' >
+                    <Button text='icon' icon= {IconRow.shoppingcart}/>
+                </Link>
                 <Menubutton type='menu-closed' Clickhandler= {handleClick}/>
             </div>
        </nav>
