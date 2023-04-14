@@ -20,10 +20,10 @@ const Menu = ({style}) => {
         <>
         <div className='Menu' style={style}>
             <div className='menuitems'>
-                <Link to='/Home'><Header1 text='Shop'/></Link>
-                <Link to='/Shoppingcart'><Header1 text='Account'/></Link>
-                <Link to='/Detail'><Header1 text='Info'/></Link>
-                <Link to='/Detail'><Header1 text='Contact'/></Link>
+                <Link to='/'><Header1 text='Shop'/></Link>
+                <Link to='/account'><Header1 text='Account'/></Link>
+                <Link to='/shoppingcart'><Header1 text='Info'/></Link>
+                <Link to='/detail'><Header1 text='Contact'/></Link>
             </div>
         </div>
       

@@ -9,7 +9,7 @@ import Header4 from '../../atoms/Header4'
 import ShoppingButton from '../../atoms/Shoppingbutton'
 
 /// TODO: Define props for Producttile
-const Producttile = () => {
+const Producttile = ({record}) => {
 
     return(
         <div className= 'Producttile'>
@@ -19,8 +19,8 @@ const Producttile = () => {
             <Subtitle text='Indie, Math rock, Noise rock'/>
             <Header3 text='Spiderland'/>
             <div className='Shopitem'> 
-                <Header4 text='Slint' />
-                <ShoppingButton className='orange'/>
+                <Header4 text= {record.title} />
+                <ShoppingButton className='orange' data={record}/>
             </div>
         </div>
     )

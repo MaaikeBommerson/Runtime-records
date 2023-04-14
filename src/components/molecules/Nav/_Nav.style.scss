@@ -14,10 +14,28 @@ nav {
     height: 2em;
     display: flex;
     justify-content: flex-end;
+
+    .shopButton {
+    position: relative;
   
     button {
       margin: 0.2em 2em;
     }
+
+    h5 {
+      position: absolute;
+      bottom: -1em;
+      right: 3em;
+
+      border-radius: 50px;
+      width: 1.5em;
+      height: 1.5em;
+
+      font-size: 0.6em;
+      color: white;
+      text-align: center;
+    }
+  }
   }
 
   .Iconbutton {
@@ -31,6 +49,8 @@ nav {
     padding: 0.3em;
     margin-right: 1em;
   }
+
+
 
   // XS - Phone
   @media (max-width: 480px) {

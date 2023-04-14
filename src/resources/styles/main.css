@@ -451,8 +451,22 @@ nav .Navbar {
   display: flex;
   justify-content: flex-end;
 }
-nav .Navbar button {
+nav .Navbar .shopButton {
+  position: relative;
+}
+nav .Navbar .shopButton button {
   margin: 0.2em 2em;
+}
+nav .Navbar .shopButton h5 {
+  position: absolute;
+  bottom: -1em;
+  right: 3em;
+  border-radius: 50px;
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 0.6em;
+  color: white;
+  text-align: center;
 }
 nav .Iconbutton {
   background-color: black;

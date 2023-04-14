@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
+import ShoppingCartContext from '../../../contexts'
+
 import Header1 from '../../atoms/Header1'
 import Header2 from '../../atoms/Header2'
 import Paragraph from '../../atoms/Paragraph'
@@ -12,7 +14,7 @@ import PriceTag from '../../atoms/Pricetag'
 import Image from '../../atoms/Image'
 
 /// TODO: Define props for Banner
-const Banner = () => {
+const Banner = ({data}) => {
 
     return(
     <div className='Banner'>

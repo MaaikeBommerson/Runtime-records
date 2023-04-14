@@ -15,10 +15,5 @@ const Paragraph = ({content}) => {
 /// TODO: Adjust and extend!
 
 
-const content = "Lorem ipsum verhaal waar ik niks van begrijp waar het over gaat en blabla bla"
-
-Paragraph.propTypes = {
-    content: content
-}
 
 export default Paragraph

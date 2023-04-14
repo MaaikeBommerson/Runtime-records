@@ -4,20 +4,18 @@ import PropTypes from 'prop-types'
 import Producttile from '../../molecules/Producttile'
 
 /// TODO: Define props for Productsection
-const Productsection = () => {
+const Productsection = ({data}) => {
 
     return(
        <section className='Productsection'>
             <div className='Products'>
-                <Producttile />
-                <Producttile />
-                <Producttile />
-                <Producttile />
-
-                <Producttile />
-                <Producttile />
-                <Producttile />
-                <Producttile />
+                {data.map((record, index)=> {
+                    return(
+                        <Producttile record={record} key={index}/>
+                    )
+                })
+                }
+             
             </div>
 
             <div className='cijfers'>1 2 3 4</div>

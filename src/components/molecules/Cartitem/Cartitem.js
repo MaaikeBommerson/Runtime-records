@@ -9,7 +9,7 @@ import Icon from '../../atoms/Icon/Icon'
 import IconRow from '../../atoms/Iconrow/Iconrow'
 
 /// TODO: Define props for Cartitem
-const Cartitem = () => {
+const Cartitem = ({record}) => {
 
     return(
         <div className='Cartitem'>
@@ -17,7 +17,7 @@ const Cartitem = () => {
                 <Image className="Image" src= "https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg"/>
                 <div className='Titles'>
                     <Header3 text='One More Light' />
-                    <Header4 text='Linkin Park'/>
+                    <Header4 text= {record.title}/>
                 </div>
             </div>
             <div className='options'>

@@ -1,14 +1,8 @@
-import React, {createContext,useState} from 'react'
-  
+import { createContext } from 'react'
 
-export const ShowMenu = () => {
+const ShoppingCartContext = createContext()
 
-  const [isActive, setIsActive] = useState(false)
-
-  const handleClick = () => {
-       setIsActive(current => !current) }
-}
-
+export default ShoppingCartContext
 
 
  
