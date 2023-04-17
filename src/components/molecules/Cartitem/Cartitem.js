@@ -21,7 +21,7 @@ const Cartitem = ({record}) => {
                 </div>
             </div>
             <div className='options'>
-            <PriceTag />
+            <PriceTag price='22.50'/>
             <Icon className='delete' icon= {IconRow.delete}/>
             </div>
         </div>

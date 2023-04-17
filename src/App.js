@@ -15,9 +15,10 @@ const App = () => {
   const [shoppingCartContent, setShoppingCartContent]= useState([])
   
   const records = [
-    {id: 1, title: 'Slint'},
-    {id: 2, title: 'Linkin park'},
-    {id: 3, title: 'Rammstein'}
+    {id: 1, title: 'covername', band: 'Slint', category: 'Rock'},
+    {id: 2, title: 'One more light', band: 'Linkin park', category: 'Rock'},
+    {id: 3, title: 'Deutchland', band: 'Rammstein', category: 'Heavy metal'},
+    {id: 4, title: 'FFDP'}
   ]
 
   const addToShoppingCart = (record) => {

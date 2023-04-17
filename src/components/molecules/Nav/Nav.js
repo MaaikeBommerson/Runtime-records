@@ -19,6 +19,7 @@ const Nav = () => {
     const handleClick = () => {
       setIsActive(current => !current) }
 
+
     return(
         <nav>
             <Logo color="black" active= {isActive}/>

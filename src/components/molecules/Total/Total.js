@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import Header3 from '../../atoms/Header1/Header1'
 import PriceTag from '../../atoms/Pricetag/Pricetag'
 import ShoppingButton from '../../atoms/Shoppingbutton/Shoppingbutton'
+import Icon from '../../atoms/Icon/Icon'
+import IconRow from '../../atoms/Iconrow/Iconrow'
 
 /// TODO: Define props for Total
 const Total = () => {
@@ -14,9 +16,11 @@ const Total = () => {
             <Header3 text='Total order'/>
             <PriceTag />
         </div>
-        <div className='Buttonbar fg-highlight'>
+        <div className='Buttonbar fg-highlight'
+             onClick= {() => alert('Nu nog ff niet afrekenen!')}>
             <h4 >Checkout</h4>
-            <ShoppingButton className='orange'/>
+            <Icon icon={IconRow.arrow} className='arrow'/>
+            <Icon icon={IconRow.shoppingcart} className='shoppingcart bg-highlight shadow'/>
         </div>
     </div>
     )

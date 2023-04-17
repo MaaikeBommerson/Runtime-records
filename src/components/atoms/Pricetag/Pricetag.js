@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 /// TODO: Define props for Header1
-const PriceTag = () => {
+const PriceTag = ({price}) => {
 
     return(
-        <div className="price bg-highlight Shadow"><h5>22<sup>.50</sup></h5></div>
+        <div className="price bg-highlight Shadow"><h5>{price}</h5></div>
     )
 }
 

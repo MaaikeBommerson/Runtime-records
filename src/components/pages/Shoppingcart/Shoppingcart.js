@@ -15,13 +15,13 @@ import ShoppingCartContext from '../../../contexts'
 
 const Shoppingcart = ({data}) => {
 
-    const {ctx} = useContext(ShoppingCartContext)
+    const ctx = useContext(ShoppingCartContext)
 
-    console.log({ctx})
+    console.log(ctx)
     return(
         <div className='Shoppingcart'>
             <Header1 text='Shopping cart'/>
-                {data.map((record, index)=> {
+                {ctx.shoppingCartContent.map((record, index)=> {
                     return (
                         <Cartitem record={record} key={index}/>
                     )
