@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import {NumericFormat} from 'react-number-format'
+import { PatternFormat } from 'react-number-format'
 import PropTypes from 'prop-types'
 
 import Header3 from '../../atoms/Header1/Header1'
@@ -7,14 +9,20 @@ import ShoppingButton from '../../atoms/Shoppingbutton/Shoppingbutton'
 import Icon from '../../atoms/Icon/Icon'
 import IconRow from '../../atoms/Iconrow/Iconrow'
 
+import ShoppingCartContext from '../../../contexts'
+
 /// TODO: Define props for Total
 const Total = () => {
+
+    const ctx = useContext(ShoppingCartContext)
+
+    const result = ctx.shoppingCartContent.reduce((total, currentValue) => total = total + currentValue.price,0)
 
     return(
     <div className='Total'>
         <div className='Totalprice'>
             <Header3 text='Total order'/>
-            <PriceTag />
+            <PriceTag price= {result} />
         </div>
         <div className='Buttonbar fg-highlight'
              onClick= {() => alert('Nu nog ff niet afrekenen!')}>

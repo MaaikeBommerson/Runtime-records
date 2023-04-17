@@ -16,12 +16,12 @@ const Cartitem = ({record}) => {
             <div className='Iteminfo'>
                 <Image className="Image" src= "https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg"/>
                 <div className='Titles'>
-                    <Header3 text='One More Light' />
-                    <Header4 text= {record.title}/>
+                    <Header3 text={record.title} />
+                    <Header4 text= {record.band}/>
                 </div>
             </div>
             <div className='options'>
-            <PriceTag price='22.50'/>
+            <PriceTag price={record.price}/>
             <Icon className='delete' icon= {IconRow.delete}/>
             </div>
         </div>

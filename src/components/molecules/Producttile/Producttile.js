@@ -13,13 +13,13 @@ const Producttile = ({record}) => {
 
     return(
         <div className= 'Producttile'>
-            <PriceTag price='22.50'/>
+            <PriceTag price={record.price}/>
             <Image className="Image" src= "https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg"/>
             
-            <Subtitle text='Indie, Math rock, Noise rock'/>
-            <Header3 text='Spiderland'/>
+            <Subtitle text={record.category}/>
+            <Header3 text={record.title}/>
             <div className='Shopitem'> 
-                <Header4 text= {record.title} />
+                <Header4 text= {record.band} />
                 <ShoppingButton className='orange' data={record}/>
             </div>
         </div>

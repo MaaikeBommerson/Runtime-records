@@ -350,6 +350,12 @@ img .Lp {
   color: white;
   padding-top: 0.2em;
 }
+.price .getal {
+  border: none;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
 
 .BlackLogo {
   height: 2.5em;

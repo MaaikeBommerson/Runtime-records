@@ -9,15 +9,10 @@ import Button from '../../atoms/Button'
 
 import ShoppingCartContext from '../../../contexts'
 
-/// TODO: Define props for Shoppingcart
-
-
-
 const Shoppingcart = ({data}) => {
 
     const ctx = useContext(ShoppingCartContext)
 
-    console.log(ctx)
     return(
         <div className='Shoppingcart'>
             <Header1 text='Shopping cart'/>
@@ -27,7 +22,6 @@ const Shoppingcart = ({data}) => {
                     )
                 })
                 }
-            
          
             <Total />
             
