@@ -25,9 +25,16 @@ const App = () => {
     setShoppingCartContent([...shoppingCartContent, record])
   }
 
+  const [shoppingcart, setShoppingCart] = useState(records)
+  const removeFromCart =  (recordId) => {
+
+    const n = shoppingCartContent.filter( item => item.id !== recordId)
+    setShoppingCartContent(n)
+  }
+
   return (
     
-    <ShoppingCartContext.Provider value={{ shoppingCartContent, addToShoppingCart}}>
+    <ShoppingCartContext.Provider value={{ shoppingCartContent, addToShoppingCart, removeFromCart}}>
 
     <BrowserRouter>
       <Routes>

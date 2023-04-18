@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import Image from '../../atoms/Image/Image'
@@ -8,8 +8,12 @@ import PriceTag from '../../atoms/Pricetag/Pricetag'
 import Icon from '../../atoms/Icon/Icon'
 import IconRow from '../../atoms/Iconrow/Iconrow'
 
+import ShoppingCartContext from '../../../contexts'
+
 /// TODO: Define props for Cartitem
 const Cartitem = ({record}) => {
+
+    const ctx = useContext(ShoppingCartContext)
 
     return(
         <div className='Cartitem'>
@@ -22,7 +26,8 @@ const Cartitem = ({record}) => {
             </div>
             <div className='options'>
             <PriceTag price={record.price}/>
-            <Icon className='delete' icon= {IconRow.delete}/>
+            <Icon className='delete' icon= {IconRow.delete}
+                  onClick= {() => ctx.removeFromCart( record.id)}/>
             </div>
         </div>
     )
