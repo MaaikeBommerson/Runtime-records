@@ -22,7 +22,10 @@ const Nav = () => {
 
     return(
         <nav>
-            <Logo color="black" active= {isActive}/>
+            <Link to= '/'>
+                <Logo color="black" active= {isActive}/>
+            </Link>
+
             <div className='Navbar'>
 
                 <div className='shopButton'>

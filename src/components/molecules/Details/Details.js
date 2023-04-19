@@ -13,18 +13,19 @@ import PriceTag from '../../atoms/Pricetag'
 import Image from '../../atoms/Image'
 
 /// TODO: Define props for Details
-const Details = () => {
+const Details = ({data}) => {
+
 
     return(
         <div className='Details'>
             <div className='BannerLp'>
-            <PriceTag price="22.50" />
+            <PriceTag price= {data && data.price} />
             <Image className='Lp' src='https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg'/>
             </div>
             <div className='Infoblock'>
-                <Header1 text='Book of Curses'/>
-                <Header2 text= 'Adult life'/>
-                <Subtitle text= 'post punk, indie, punk'/>
+                <Header1 text= {data && data.title}/>
+                <Header2 text= {data && data.band}/>
+                <Subtitle text= {data && data.category}/>
 
                 <Paragraph content='This blistering punk-rock debut from a 55-year-old 
                             veteran of the scene delivers urgent music for 
@@ -38,7 +39,7 @@ const Details = () => {
 
                 <div className='Buttonbar fg-highlight'>
                 <h4 >Add to cart</h4>
-                <ShoppingButton className='orange'/>
+                <ShoppingButton className='orange' data= {data}/>
                 </div>
             </div>
         </div> 

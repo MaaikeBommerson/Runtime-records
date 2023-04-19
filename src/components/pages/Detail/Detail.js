@@ -21,9 +21,9 @@ const Detail = ({data}) => {
 
     return( 
         <>
-        <Details />
-          <h1 >{currentRecord && currentRecord.title}</h1>
-        <Suggested />
+        <Details data={currentRecord}/>
+          <h1 ></h1>
+        <Suggested data= {data}/>
         </>
     )
 

@@ -4,14 +4,18 @@ import PropTypes from 'prop-types'
 import Producttile from '../../molecules/Producttile'
 
 /// TODO: Define props for Suggested
-const Suggested = () => {
+const Suggested = ({data}) => {
 
     return(
         <div className='Suggested'>
-            <Producttile />
-            <Producttile />
-            <Producttile />
-            <Producttile />
+            {data.map((record, index)=> {
+                //hier moet een while loop in toegevoegd 
+                //worden zodat hij bij de 4 producten stopt
+                    return(
+                        <Producttile record={record} key={index}/>
+                    )
+                })
+                }
         </div>
     )
 

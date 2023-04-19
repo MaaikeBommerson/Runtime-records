@@ -42,7 +42,7 @@ const App = () => {
           <Route index element={<Home data={records}/>} />
           <Route path="/detail/:id" element={<Detail  data={records} />} />
           <Route path="/shoppingcart" element={<Shoppingcart data={records}/>} />
-          <Route path="/contact" element={<Detail/>} />
+          <Route path="/contact" element={<Detail data={records}/>} />
         </Route>
       </Routes>
     </BrowserRouter >

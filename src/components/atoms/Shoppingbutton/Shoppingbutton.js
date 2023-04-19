@@ -29,7 +29,7 @@ const ShoppingButton = ({className,data}) => {
         <div className="ShoppingButton white">
             <Icon icon= {IconRow.arrow} className='Arrow'/>
             <button className='Shadow'
-            onClick={() => ctx.addToShoppingCart( data)}
+            onClick={() => ctx.addToShoppingCart(data)}
             >
                 <Icon icon= {IconRow.shoppingcart} />
             </button>

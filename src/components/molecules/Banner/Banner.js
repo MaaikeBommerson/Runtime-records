@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
 
 import ShoppingCartContext from '../../../contexts'
@@ -16,24 +17,28 @@ import Image from '../../atoms/Image'
 /// TODO: Define props for Banner
 const Banner = ({data}) => {
 
+    const bannerRecord = data[2]
+
     return(
     <div className='Banner'>
         <div className='Infoblock'>
-            <Header2 text= 'Adult life'/>
-            <Header1 text='Book of Curses'/>
+            <Header2 text= {bannerRecord.band}/>
+            <Header1 text={bannerRecord.title}/>
             <Paragraph content='This blistering punk-rock debut from a 55-year-old 
                             veteran of the scene delivers urgent music for 
                             evergreen unease. These are weary, angry songs, 
                             crafted with an insatiable verve and an almost
                             triumphant fury.' />
-            <Subtitle text= 'post punk, indie, punk'/>
+            <Subtitle text= {bannerRecord.category}/>
             <div className='Buttonbar'>
-                <ShoppingButton/>
+                <ShoppingButton data= {bannerRecord}/>
+                <Link to= {'/detail/' + bannerRecord.id}>
                 <Button text='Read more'/>
+                </Link>
             </div>
         </div>
         <div className='BannerLp'>
-            <PriceTag price="22.50" />
+            <PriceTag price= {bannerRecord.price} />
             <Image className='Lp' src='https://media.s-bol.com/NPOyPV94QX2/1200x898.jpg'/>
         </div>
     </div>   

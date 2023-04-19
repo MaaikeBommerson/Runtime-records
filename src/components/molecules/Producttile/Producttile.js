@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import Image from '../../atoms/Image'
 import PriceTag from '../../atoms/Pricetag'
@@ -11,13 +12,17 @@ import ShoppingButton from '../../atoms/Shoppingbutton'
 /// TODO: Define props for Producttile
 const Producttile = ({record}) => {
 
+    console.log(record)
+
     return(
         <div className= 'Producttile'>
-            <PriceTag price={record.price}/>
-            <Image className="Image" src= "https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg"/>
+            <Link to= {'/detail/' + record.id} >
+                <PriceTag price={record.price}/>
+                <Image className="Image" src= "https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg"/>
+            </Link>
+                <Subtitle text={record.category}/>
+                <Header3 text= {record.title}/>
             
-            <Subtitle text={record.category}/>
-            <Header3 text={record.title}/>
             <div className='Shopitem'> 
                 <Header4 text= {record.band} />
                 <ShoppingButton className='orange' data={record}/>
