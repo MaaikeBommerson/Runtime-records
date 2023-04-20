@@ -12,8 +12,6 @@ import ShoppingButton from '../../atoms/Shoppingbutton'
 /// TODO: Define props for Producttile
 const Producttile = ({record}) => {
 
-    console.log(record)
-
     return(
         <div className= 'Producttile'>
             <Link to= {'/detail/' + record.id} >

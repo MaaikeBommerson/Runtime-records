@@ -10,7 +10,7 @@ const Home = ({data}) => {
     return(
     <>
       <Banner data= {data}/>
-      <Filterbar/>
+      <Filterbar data= {data}/>
 
       <Productsection data={data}/>
 

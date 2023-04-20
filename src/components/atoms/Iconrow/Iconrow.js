@@ -5,7 +5,7 @@ const IconRow = {
     shoppingcart : 'fa-cart-shopping',
     menu : 'fa-bars',
     filter: 'fa-filter',
-    save : 'fa-floppy-disk',
+    sort : 'fa-sort',
     arrow : 'fa-arrow-right-long',
     mail : 'fa-envelope',
     website : 'fab fa-chrome',

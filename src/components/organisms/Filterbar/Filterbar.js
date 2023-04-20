@@ -5,12 +5,12 @@ import SearchBar from '../../molecules/Searchbar/Searchbar'
 import Filter from '../../molecules/Filter'
 
 /// TODO: Define props for Filterbar
-const Filterbar = () => {
+const Filterbar = ({data}) => {
 
     return(
         <div className='Filterbar'>
-            <SearchBar />
-            <Filter />
+            <SearchBar data={data}/>
+            <Filter data={data}/>
         </div>
     )
 

@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import Producttile from '../../molecules/Producttile'
+import Filterbar from '../Filterbar/Filterbar'
 
 /// TODO: Define props for Productsection
 const Productsection = ({data}) => {
 
     return(
        <section className='Productsection'>
+            {/* <Filterbar data= {data}/> */}
             <div className='Products'>
                 {data.map((record, index)=> {
                     return(
