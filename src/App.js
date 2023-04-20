@@ -39,7 +39,11 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigation />}>
+
+        
           <Route index element={<Home data={records}/>} />
+
+
           <Route path="/detail/:id" element={<Detail  data={records} />} />
           <Route path="/shoppingcart" element={<Shoppingcart data={records}/>} />
           <Route path="/contact" element={<Detail data={records}/>} />

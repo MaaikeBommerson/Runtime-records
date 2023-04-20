@@ -10,7 +10,7 @@ const Filterbar = ({data}) => {
     return(
         <div className='Filterbar'>
             <SearchBar data={data}/>
-            <Filter data={data}/>
+            <Filter data= {data}/>
         </div>
     )
 
