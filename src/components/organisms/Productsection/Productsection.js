@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { filterContext } from '../../../contexts'
 import PropTypes from 'prop-types'
 
 import Producttile from '../../molecules/Producttile'
@@ -7,11 +8,15 @@ import Filterbar from '../Filterbar/Filterbar'
 /// TODO: Define props for Productsection
 const Productsection = ({data}) => {
 
+    const ctx = useContext(filterContext)
+
+    console.log(ctx.filtered)
+    //uitzoeken hoe ik map door filterCategory of zo
     return(
        <section className='Productsection'>
             {/* <Filterbar data= {data}/> */}
             <div className='Products'>
-                {data.map((record, index)=> {
+                {ctx.filtered.map((record, index)=> {
                     return(
                         <Producttile record={record} key={index}/>
                     )

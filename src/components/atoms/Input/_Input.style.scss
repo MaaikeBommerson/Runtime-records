@@ -5,6 +5,9 @@
   font-family: 'heading';
   padding: 0.2em 0.8em;
 
+  &:focus {
+    outline: none;
+  }
 
   // XS - Phone
   @media (max-width: 480px) {

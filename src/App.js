@@ -8,11 +8,11 @@ import Shoppingcart from './components/pages/Shoppingcart'
 import Navigation from "./components/organisms/Navigation"
 
 import ShoppingCartContext from './contexts'
+import { filterContext } from "./contexts"
 
 
 const App = () => {
 
-  const [shoppingCartContent, setShoppingCartContent]= useState([])
   
   const records = [
     {id: 1, title: 'covername', band: 'Slint', category: 'Rock', price: 17.50},
@@ -20,6 +20,9 @@ const App = () => {
     {id: 3, title: 'Deutchland', band: 'Rammstein', category: 'Heavy metal', price: 22.50},
     {id: 4, title: 'AfterLife', band: 'FFDP', category: 'Heavy metal', price: 20.50}
   ]
+
+  // Shoppingcart
+  const [shoppingCartContent, setShoppingCartContent]= useState([])
 
   const addToShoppingCart = (record) => {
     setShoppingCartContent([...shoppingCartContent, record])
@@ -32,17 +35,27 @@ const App = () => {
     setShoppingCartContent(n)
   }
 
+  // Filteren
+  const [filtered, setFiltered] = useState(records)
+    const FilterCategory =  (recordCategory) => {
+      const n = records.filter( item => item.category === recordCategory)
+      setFiltered(n)
+    }
+    const ResetFilter = () => {
+        setFiltered(records)
+    }
+
+
   return (
     
     <ShoppingCartContext.Provider value={{ shoppingCartContent, addToShoppingCart, removeFromCart}}>
+    <filterContext.Provider value={{ filtered, FilterCategory, ResetFilter}}>
 
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigation />}>
 
-        
           <Route index element={<Home data={records}/>} />
-
 
           <Route path="/detail/:id" element={<Detail  data={records} />} />
           <Route path="/shoppingcart" element={<Shoppingcart data={records}/>} />
@@ -50,7 +63,7 @@ const App = () => {
         </Route>
       </Routes>
     </BrowserRouter >
-
+    </filterContext.Provider>
     </ShoppingCartContext.Provider>
 
   )

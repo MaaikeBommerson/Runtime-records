@@ -430,11 +430,15 @@ h2 {
   font-family: "heading";
   padding: 0.2em 0.8em;
 }
+.Input:focus {
+  outline: none;
+}
 .Searchbutton {
   border-radius: 100%;
   border: none;
   background-color: white;
   padding: 0;
+  margin-right: 0;
 }
 .Searchbutton img {
   width: 3em;
@@ -564,21 +568,28 @@ nav .Iconbutton {
   justify-content: baseline;
   margin: 0 auto;
 }
+.Filter .buttons {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
 .Filter button {
   background-color: black;
   color: white;
   width: 2.5em;
   height: 2.5em;
+  cursor: pointer;
 }
 .Filter .dropdown {
   border: 1px solid black;
   border-radius: 10px;
   width: 200px;
-  z-index: 100;
+  z-index: 10000;
   background-color: black;
   color: white;
   text-decoration: none;
   padding: 0;
+  position: absolute;
 }
 .Filter .dropdown ul {
   text-decoration: none;
@@ -590,6 +601,7 @@ nav .Iconbutton {
   padding: 0.6em 1em;
   border-bottom: 1px solid white;
   list-style: none;
+  cursor: pointer;
   width: 100%;
   margin: 0;
 }
@@ -803,4 +815,8 @@ footer h3 {
 }
 .Shadow {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

@@ -1,11 +1,16 @@
 .Filter {
-
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
 
   button {
   background-color: black;
   color: white;
   width: 2.5em;
   height: 2.5em;
+  cursor: pointer;
   }
 
   .dropdown {
@@ -13,12 +18,13 @@
     border-radius: 10px;
     width: 200px;
 
-    z-index: 100;
+    z-index: 10000;
 
     background-color: black;
     color: white;
     text-decoration: none;
     padding: 0;
+    position: absolute;
 
     ul{
       text-decoration: none;
@@ -30,6 +36,7 @@
       padding: 0.6em 1em;
       border-bottom: 1px solid white;
       list-style: none;
+      cursor: pointer;
 
       width: 100%;
       margin: 0 ;

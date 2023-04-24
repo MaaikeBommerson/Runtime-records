@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { filterContext } from '../../../contexts'
 import PropTypes from 'prop-types'
 
 import Button from '../../atoms/Button'
@@ -9,37 +10,45 @@ import Producttile from '../Producttile/Producttile'
 /// TODO: Define props for Filter
 const Filter = ({data}) => {
 
-    //filter werkt! nu nog ongedaan maken...
-    const [filtered, setFiltered] = useState(data)
-    const FilterCategory =  (recordCategory) => {
-      const n = data.filter( item => item.category === recordCategory)
-      setFiltered(n)
-    }
-    const ResetFilter = () => {
-        setFiltered(data)
-    }
+    // filter openen en sluiten
+    const [isActive, setIsActive] = useState(false)
+    const handleClick = () => {
+        setIsActive(current => !current) 
+
+      }
+
+    const ctx = useContext(filterContext)
+
+    //dit doet niet wat het moet doen, filtert op title nu
+    // const [sorted, setSorted] = useState(data)
+    // const Sortitems =  (sortBy) => {
+    //   const s = data.price.sort((a, b) => a-b)
+    //   setSorted(s)
+    // }
+    // const ResetSort = () => {
+    //     setSorted(data)
+    // }
+
+    // console.log(sorted)
 
     return(
         <>
         <div className='Filter'>
-            <Button text='icon' icon= {IconRow.filter} onClick= {() => ResetFilter}/>
-            <div className='dropdown'>
+            <div className= 'buttons'>
+            <Button text='icon' icon= {IconRow.filter} onClick= {() => handleClick()}/>
+            <Button text='icon' icon= {IconRow.sort} onClick= {() => handleClick()}/>
+            </div>
+            <div className='dropdown'
+                 style={{display: isActive ? 'block' : 'none'}}>
                 <ul>
-                    <li onClick= {() => ResetFilter()}>Geen filter</li>
-                    <li onClick= {() => FilterCategory('Heavy metal')}>Heavy metal</li>
-                    <li onClick= {() => FilterCategory('Rock')}>Rock</li>
-                    <li onClick= {() => FilterCategory('Heavy metal')}>Niet bestaand</li>
-                    <li className= 'last' onClick= {() => FilterCategory('Heavy metal')}>Niet bestaand</li>
+                    <li onClick= {() => ctx.ResetFilter()}> Geen filter</li>
+                    <li onClick= {() => ctx.FilterCategory('Heavy metal')}>Heavy metal</li>
+                    <li onClick= {() => ctx.FilterCategory('Rock')}>Rock</li>
+                    <li onClick= {() => ctx.FilterCategory('Heavy metal')}>Niet bestaand</li>
+                    <li className= 'last' onClick= {() => ctx.FilterCategory('Heavy metal')}>Niet bestaand</li>
                 </ul>
             </div>
-            <Button text='icon' icon= {IconRow.sort} onClick= {() => alert('Klik klik!')}/>
         </div>
-        {/* {filtered.map((record, index)=> {
-                    return(
-                        <Producttile record={record} key={index}/>
-                    )
-                })
-                } */}
         </>
     )
 

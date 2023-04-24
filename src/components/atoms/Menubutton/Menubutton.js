@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 
 /// TODO: Define props for Menuitem
 const Menubutton = ({Clickhandler}) => {
-   
 
     const [isActive, setIsActive] = useState(false)
 
