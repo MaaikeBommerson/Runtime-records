@@ -10,7 +10,6 @@ const Productsection = ({data}) => {
 
     const ctx = useContext(filterContext)
 
-    console.log(ctx.filtered)
     //uitzoeken hoe ik map door filterCategory of zo
     return(
        <section className='Productsection'>

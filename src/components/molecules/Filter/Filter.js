@@ -11,35 +11,38 @@ import Producttile from '../Producttile/Producttile'
 const Filter = ({data}) => {
 
     // filter openen en sluiten
-    const [isActive, setIsActive] = useState(false)
-    const handleClick = () => {
-        setIsActive(current => !current) 
+    const [isActiveF, setIsActiveF] = useState(false)
+    const filterClick = () => {
+        setIsActiveF(current => !current) 
 
       }
 
     const ctx = useContext(filterContext)
 
-    //dit doet niet wat het moet doen, filtert op title nu
-    // const [sorted, setSorted] = useState(data)
-    // const Sortitems =  (sortBy) => {
-    //   const s = data.price.sort((a, b) => a-b)
-    //   setSorted(s)
-    // }
-    // const ResetSort = () => {
-    //     setSorted(data)
-    // }
+    const [isActiveS, setIsActiveS] = useState(false)
+    const sortClick = () => {
+        setIsActiveS(current => !current) 
+    }
+    const [sorted, setSorted] = useState(data)
+    const Sortitems =  () => {
+      const s = [...data].sort((a, b) => a.price > b.price ? 1 : -1)
+      setSorted(s)
+    }
+    const ResetSort = () => {
+        setSorted(data)
+    }
 
-    // console.log(sorted)
+    console.log(sorted)
 
     return(
         <>
         <div className='Filter'>
             <div className= 'buttons'>
-            <Button text='icon' icon= {IconRow.filter} onClick= {() => handleClick()}/>
-            <Button text='icon' icon= {IconRow.sort} onClick= {() => handleClick()}/>
+            <Button text='icon' icon= {IconRow.filter} onClick= {() => filterClick()}/>
+            <Button text='icon' icon= {IconRow.sort} onClick= {() => Sortitems()}/>
             </div>
             <div className='dropdown'
-                 style={{display: isActive ? 'block' : 'none'}}>
+                 style={{display: isActiveF ? 'block' : 'none'}}>
                 <ul>
                     <li onClick= {() => ctx.ResetFilter()}> Geen filter</li>
                     <li onClick= {() => ctx.FilterCategory('Heavy metal')}>Heavy metal</li>
