@@ -19,9 +19,13 @@ const Filter = ({data}) => {
 
     const ctx = useContext(filterContext)
 
+    //sorteren
+
     const [isActiveS, setIsActiveS] = useState(false)
     const sortClick = () => {
         setIsActiveS(current => !current) 
+
+
     }
 
     const [sorted, setSorted] = useState(data)
@@ -46,9 +50,9 @@ const Filter = ({data}) => {
         <div className='Filter'>
             <div className= 'buttons'>
             <Button text='icon' icon= {IconRow.filter} onClick= {() => filterClick()}/>
-            <Button text='icon' icon= {IconRow.sort} onClick= {() => Sortitems()}
+            <Button text='icon' icon= {IconRow.sort} onClick= {() => sortClick()}
                     style={{display: isActiveS ? 'none' : 'block'}}/>
-            <Button text ='icon' icon= {IconRow.close} onClick= {() => ResetSort()}
+            <Button text ='icon' icon= {IconRow.close} onClick= {() => sortClick()}
                     style={{display: isActiveS ? 'block' : 'none'}} />
             </div>
             <div className='dropdown'
