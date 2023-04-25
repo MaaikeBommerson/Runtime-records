@@ -6,11 +6,11 @@ import IconRow from '../../atoms/Iconrow'
 
 
 /// TODO: Define props for Button
-const Button = ({text, onClick, icon}) => {
+const Button = ({text, onClick, icon, style}) => {
 
     if (text === 'icon') {
             return(
-                <button className= "Iconbutton Shadow" onClick= {onClick}>
+                <button className= "Iconbutton Shadow" onClick= {onClick} style={style}>
                 <Icon icon= {icon}/>
                 </button>
             )

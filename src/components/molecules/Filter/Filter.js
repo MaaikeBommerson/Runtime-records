@@ -23,23 +23,33 @@ const Filter = ({data}) => {
     const sortClick = () => {
         setIsActiveS(current => !current) 
     }
+
     const [sorted, setSorted] = useState(data)
     const Sortitems =  () => {
       const s = [...data].sort((a, b) => a.price > b.price ? 1 : -1)
       setSorted(s)
+
+      setIsActiveS(current => !current) 
     }
+
     const ResetSort = () => {
         setSorted(data)
+
+        setIsActiveS(current => !current) 
     }
 
     console.log(sorted)
+    console.log(isActiveS)
 
     return(
         <>
         <div className='Filter'>
             <div className= 'buttons'>
             <Button text='icon' icon= {IconRow.filter} onClick= {() => filterClick()}/>
-            <Button text='icon' icon= {IconRow.sort} onClick= {() => Sortitems()}/>
+            <Button text='icon' icon= {IconRow.sort} onClick= {() => Sortitems()}
+                    style={{display: isActiveS ? 'none' : 'block'}}/>
+            <Button text ='icon' icon= {IconRow.close} onClick= {() => ResetSort()}
+                    style={{display: isActiveS ? 'block' : 'none'}} />
             </div>
             <div className='dropdown'
                  style={{display: isActiveF ? 'block' : 'none'}}>
