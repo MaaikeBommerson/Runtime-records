@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react'
+import { useState, useContext } from 'react'
 import { filterContext } from '../../../contexts'
 import PropTypes from 'prop-types'
 
@@ -22,28 +22,32 @@ const Filter = ({data}) => {
     //sorteren
 
     const [isActiveS, setIsActiveS] = useState(false)
+    // const [sorted, setSorted] = useState(data)
+
     const sortClick = () => {
         setIsActiveS(current => !current) 
-
-
     }
 
+    // if (isActiveS === false) {
+    //     const s = [...data].sort((a, b) => a.price > b.price ? 1 : -1)
+    //     setSorted(s)
+
+    // } else {
+    //     setSorted(data)
+        
+    // }
+    // }
     const [sorted, setSorted] = useState(data)
     const Sortitems =  () => {
       const s = [...data].sort((a, b) => a.price > b.price ? 1 : -1)
       setSorted(s)
-
-      setIsActiveS(current => !current) 
     }
 
     const ResetSort = () => {
         setSorted(data)
-
-        setIsActiveS(current => !current) 
     }
 
     console.log(sorted)
-    console.log(isActiveS)
 
     return(
         <>
@@ -63,6 +67,15 @@ const Filter = ({data}) => {
                     <li onClick= {() => ctx.FilterCategory('Rock')}>Rock</li>
                     <li onClick= {() => ctx.FilterCategory('Heavy metal')}>Niet bestaand</li>
                     <li className= 'last' onClick= {() => ctx.FilterCategory('Heavy metal')}>Niet bestaand</li>
+                </ul>
+            </div>
+            <div className='dropdown'
+                 style={{display: isActiveS ? 'block' : 'none'}}>
+                <ul>
+                    <li onClick= {() => ResetSort()}> Geen sortering</li>
+                    <li onClick= {() => Sortitems('price')}>Prijs</li>
+                    <li onClick= {() => Sortitems('band')}>Band</li>
+                    <li className= 'last' onClick= {() => Sortitems('title')}>Album</li>
                 </ul>
             </div>
         </div>

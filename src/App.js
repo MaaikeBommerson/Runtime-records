@@ -45,11 +45,22 @@ const App = () => {
         setFiltered(records)
     }
 
+    // Sorteren
+    const [sorted, setSorted] = useState(records)
+      const Sortitems =  (filterBy) => {
+        const s = [...records].sort((a, b) => a.price > b.price ? 1 : -1)
+          setSorted(s)
+      }
+
+      const ResetSort = () => {
+        setSorted(records)
+      }
+
 
   return (
     
     <ShoppingCartContext.Provider value={{ shoppingCartContent, addToShoppingCart, removeFromCart}}>
-    <filterContext.Provider value={{ filtered, FilterCategory, ResetFilter}}>
+    <filterContext.Provider value={{ filtered, FilterCategory, ResetFilter, Sortitems, ResetSort}}>
 
     <BrowserRouter>
       <Routes>
