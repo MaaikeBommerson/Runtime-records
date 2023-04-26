@@ -59,9 +59,7 @@ const Filter = ({data}) => {
                  style={{display: isActiveS && !isActiveF ? 'block' : 'none'}}>
                 <ul>
                     <li onClick= {() => ctx.ResetSort()}> Geen sortering</li>
-                    <li onClick= {() => ctx.Sortitems()}>Prijs</li>
-                    <li onClick= {() => ctx.Sortitems()}>Band</li>
-                    <li className= 'last' onClick= {() => ctx.Sortitems('title')}>Album</li>
+                    <li className= 'last' onClick= {() => ctx.Sortitems()}>Prijs</li>
                 </ul>
             </div>
         </div>

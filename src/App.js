@@ -50,13 +50,11 @@ const App = () => {
     const [sorted, setSorted] = useState(filtered)
       const Sortitems =  () => {
         const s = [...filtered].sort((a, b) => a.price - b.price)
-          setSorted(s) 
+          setFiltered(s) 
       }
       const ResetSort = () => {
-        setSorted(filtered)
+        setFiltered(records)
       }
-
-      // ((a, b) => a.price > b.price ? 1 : -1)
 
   return (
     
