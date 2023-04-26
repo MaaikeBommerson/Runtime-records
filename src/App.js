@@ -46,21 +46,22 @@ const App = () => {
     }
 
     // Sorteren
-    const [sorted, setSorted] = useState(records)
-      const Sortitems =  (filterBy) => {
-        const s = [...records].sort((a, b) => a.price > b.price ? 1 : -1)
-          setSorted(s)
+    // waarom werkt dit niet?
+    const [sorted, setSorted] = useState(filtered)
+      const Sortitems =  () => {
+        const s = [...filtered].sort((a, b) => a.price - b.price)
+          setSorted(s) 
       }
-
       const ResetSort = () => {
-        setSorted(records)
+        setSorted(filtered)
       }
 
+      // ((a, b) => a.price > b.price ? 1 : -1)
 
   return (
     
     <ShoppingCartContext.Provider value={{ shoppingCartContent, addToShoppingCart, removeFromCart}}>
-    <filterContext.Provider value={{ filtered, FilterCategory, ResetFilter, Sortitems, ResetSort}}>
+    <filterContext.Provider value={{ filtered, FilterCategory, ResetFilter, sorted, Sortitems, ResetSort}}>
 
     <BrowserRouter>
       <Routes>

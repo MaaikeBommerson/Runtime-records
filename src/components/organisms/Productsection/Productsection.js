@@ -15,7 +15,7 @@ const Productsection = ({data}) => {
        <section className='Productsection'>
             {/* <Filterbar data= {data}/> */}
             <div className='Products'>
-                {ctx.filtered.map((record, index)=> {
+                {ctx.sorted.map((record, index)=> {
                     return(
                         <Producttile record={record} key={index}/>
                     )
