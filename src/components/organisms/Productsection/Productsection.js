@@ -13,7 +13,6 @@ const Productsection = ({data}) => {
     //uitzoeken hoe ik map door filterCategory of zo
     return(
        <section className='Productsection'>
-            {/* <Filterbar data= {data}/> */}
             <div className='Products'>
                 {/* {ctx.filtered.map((record, index)=> {
                     return(
@@ -21,7 +20,7 @@ const Productsection = ({data}) => {
                     )
                 })
                 } */}
-                { data.filter(record => {
+                { ctx.filtered.filter(record => {
                 if (ctx.searchInput === '') {
                 return record
                 } else if (record.band.toLowerCase().includes(ctx.searchInput.toLowerCase())) {

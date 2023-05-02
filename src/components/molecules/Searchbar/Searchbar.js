@@ -10,28 +10,11 @@ import { filterContext } from '../../../contexts'
 const SearchBar = ({data}) => {
 
     const ctx = useContext(filterContext)
-    // const [searchInput, setSearchInput] = useState('')
      
     return(
-        <div>
         <div className='Searchbar'>
             <Input onChange = {ctx.handleChange} value= {ctx.searchInput} />
             <SearchButton />
-        </div>
-        {/* <div>
-            { data.filter(record => {
-                if (searchInput === '') {
-                return record
-                } else if (record.band.toLowerCase().includes(searchInput.toLowerCase())) {
-                    return record
-            }
-            }).map((record, index)=> {
-                    return(
-                        <Producttile record={record} key={index}/>
-                    )
-                })
-            }
-        </div> */}
         </div>
     )
 
