@@ -15,12 +15,24 @@ const Productsection = ({data}) => {
        <section className='Productsection'>
             {/* <Filterbar data= {data}/> */}
             <div className='Products'>
-                {ctx.filtered.map((record, index)=> {
+                {/* {ctx.filtered.map((record, index)=> {
                     return(
                         <Producttile record={record} key={index}/>
                     )
                 })
-                }
+                } */}
+                { data.filter(record => {
+                if (ctx.searchInput === '') {
+                return record
+                } else if (record.band.toLowerCase().includes(ctx.searchInput.toLowerCase())) {
+                    return record
+            }
+            }).map((record, index)=> {
+                    return(
+                        <Producttile record={record} key={index}/>
+                    )
+                })
+            }
              
             </div>
 

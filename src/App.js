@@ -17,8 +17,12 @@ const App = () => {
   const records = [
     {id: 1, title: 'covername', band: 'Slint', category: 'Rock', price: 17.50},
     {id: 2, title: 'One more light', band: 'Linkin park', category: 'Rock', price: 20.00},
-    {id: 3, title: 'Deutchland', band: 'Rammstein', category: 'Heavy metal', price: 22.50},
-    {id: 4, title: 'AfterLife', band: 'FFDP', category: 'Heavy metal', price: 20.50}
+    {id: 3, title: 'Rammstein', band: 'Rammstein', category: 'Heavy metal', price: 22.50},
+    {id: 4, title: 'AfterLife', band: 'FFDP', category: 'Heavy metal', price: 20.50},
+    {id: 5, title: 'N.A.T.I.O.N.', band: 'Bad wolves', category: 'Heavy metal', price: 23.50},
+    {id: 6, title: 'Meteora', band: 'Linkin park', category: 'Rock', price: 18.00},
+    {id: 7, title: 'Zeit', band: 'Rammstein', category: 'Heavy metal', price: 25.50},
+    {id: 8, title: 'Thats the spirit', band: 'BMTH', category: 'Rock', price: 19.50}
   ]
 
   // Shoppingcart
@@ -47,7 +51,7 @@ const App = () => {
 
     // Sorteren
     // waarom werkt dit niet?
-    const [sorted, setSorted] = useState(filtered)
+    // const [sorted, setSorted] = useState(filtered)
       const Sortitems =  () => {
         const s = [...filtered].sort((a, b) => a.price - b.price)
           setFiltered(s) 
@@ -56,10 +60,17 @@ const App = () => {
         setFiltered(records)
       }
 
+      // Searchbar
+      const [searchInput, setSearchInput] = useState('')
+      const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.target.value);
+      }
+
   return (
     
     <ShoppingCartContext.Provider value={{ shoppingCartContent, addToShoppingCart, removeFromCart}}>
-    <filterContext.Provider value={{ filtered, FilterCategory, ResetFilter, sorted, Sortitems, ResetSort}}>
+    <filterContext.Provider value={{ filtered, FilterCategory, ResetFilter, Sortitems, ResetSort, searchInput, handleChange}}>
 
     <BrowserRouter>
       <Routes>
