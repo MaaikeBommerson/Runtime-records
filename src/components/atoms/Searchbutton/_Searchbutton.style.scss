@@ -11,17 +11,20 @@
 
   // XS - Phone
   @media (max-width: 480px) {
-
+    img {
+      width: 2em;
+      height: 2em;
+    }
   }
 
   // S - Tablet
-  @media (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
 
   }
 
   // M - Tablet/Laptop
-  @media (max-width: 1024px) {
-
+  @media (min-width: 481px) and (max-width: 768px) {
+    margin-right: 0.5em;
   }
 
   // L - High Res

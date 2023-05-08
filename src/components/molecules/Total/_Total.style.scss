@@ -49,27 +49,58 @@
   }
     // XS - Phone
     @media (max-width: 480px) {
+      .Buttonbar {
+        margin-top: 2em;
+        margin-right: 1.5em;
+        gap: 0.8em;
+   
 
+        .shoppingcart {
+          padding: 0.55em 0.5em;
+        }
+        
+        .arrow{
+          margin: 0.2em 0;
+        }
+      }
+      .Totalprice {
+        .price {
+            padding: 1em 0.6em;
+            margin-top: -1em;
+            border-radius: 70px;
+            width: 4em;
+            height: 4em;
+            margin-right: 1.5em;
+    
+            h5 {
+              font-size: 1.2em;
+            }
+        }
+    }
     }
 
     // S - Tablet
-    @media (max-width: 768px) {
-
+    @media (min-width: 481px) and (max-width: 768px) {
+      .Buttonbar {
+        margin-top: 3em;
+        gap: 1em;
+        
+        .arrow{
+          margin: 0.2em 0;
+        }
+      }
+      .Totalprice {
+        .price {
+            padding: 1.6em 1em;
+            border-radius: 70px;
+            width: 6em;
+            height: 6em;
+            margin-right: 1em;
+    
+            h5 {
+              font-size: 1.7em;
+            }
+        }
     }
-
-    // M - Tablet/Laptop
-    @media (max-width: 1024px) {
-
-    }
-
-    // L - High Res
-    @media (max-width: 1200px) {
-
-    }
-
-    // XL - Ultra High Res
-    @media (min-width: 1201px) {
-
-    }
-
+}
 }

@@ -22,7 +22,6 @@ const Detail = ({data}) => {
     return( 
         <>
         <Details data={currentRecord}/>
-          <h1 ></h1>
         <Suggested data= {data}/>
         </>
     )

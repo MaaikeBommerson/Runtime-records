@@ -3,6 +3,8 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
+    overflow-x: hidden !important;
+   
   }
 
   button {
@@ -48,6 +50,13 @@
   }
   // XS - Phone
   @media (max-width: 480px) {
+    width: 90%;
+
+    .dropdown {
+      width: 60%;
+      margin: 0 10% 0 30%;
+      justify-content: flex-end;
+    }
 
   }
 

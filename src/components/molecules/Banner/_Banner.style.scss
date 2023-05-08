@@ -2,30 +2,25 @@
   background-image: url("runtime-records-backdrop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
+  overflow-x: hidden !important;
   margin-top: 0;
   padding: 10em 20%;
 
   color: white;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   h5 {
     margin-bottom: 2em;
   }
  
   .Infoblock {
-    width: 50%;
+    width: 100%;
   }
 
   .BannerLp {
     position: relative;
-
-    .Lp {
-      width: 30em;
-    }
-    
-    margin-left: 1em;
   
   }
   .Buttonbar {
@@ -57,12 +52,72 @@
 
   // XS - Phone
   @media (max-width: 480px) {
+    display: block;
+    padding: 5em 5% 2em 5%;
+    margin: 0;
+
+    .Infoblock {
+      width: 100%;
+      margin-bottom: 2em;
+      
+    }
+    h1 {
+      font-size: 1.5em;
+    }
+    h2 {
+      font-size: 1em;
+    }
+    p{
+      font-size: 0.9em;
+      line-height: 1.7em;
+    }
+    .BannerLp {
+      width: 90%;
+      margin: 0 5%;
 
   }
 
-  // S - Tablet
-  @media (max-width: 768px) {
+  .Buttonbar {
+    gap: 2em;
+    margin-top: 1em;
+    width: 90%;
+    margin: 0 5%;
+    justify-content: space-between;
+    
+    .Arrow {
+      margin: 0 0.2em;
+    }
+  }
+  }
 
+  // S - Tablet
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 7em 5% 4em 5%;
+    gap: 2em;
+    width: 100%;
+  
+    h1 {
+      font-size: 1.8em;
+    }
+    h2 {
+      font-size: 1em;
+    }
+    h5 {
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 0.8em;
+      line-height: 1.7em;
+    }
+    .Buttonbar {
+      gap: 5em;
+      margin-top: 0;
+    }
+
+    .Bannerlp {
+      width: 80%;
+      margin: 0;
+    }
   }
 
   // M - Tablet/Laptop

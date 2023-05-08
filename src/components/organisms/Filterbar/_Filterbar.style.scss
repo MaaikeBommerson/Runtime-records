@@ -1,27 +1,31 @@
 .Filterbar {
-  display: flex;
-  justify-content: flex-end;
-
   width: 60%;
   margin: 3em auto;
-
   
   
 
 
   // XS - Phone
   @media (max-width: 480px) {
-
+    width: 100%;
+    display: block;
+    overflow-x: hidden !important;
+    margin: 2em 0 3em 0;
   }
 
   // S - Tablet
-  @media (max-width: 768px) {
-
+  @media (min-width: 481px) and (max-width: 767px) {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2em auto;
   }
 
   // M - Tablet/Laptop
-  @media (max-width: 1024px) {
-
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3em;
+    
   }
 
   // L - High Res

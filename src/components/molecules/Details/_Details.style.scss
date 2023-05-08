@@ -51,13 +51,59 @@
 
 
   // XS - Phone
-  @media (max-width: 480px) {
-
+  @media (max-width: 480px ) {
+    display: block;
+    margin: 5em 10% 2em 10%;
+    
+    .BannerLp {
+    width: 100%;
+  }
+  .Infoblock {
+    width: 100%;
+    padding: 0 0.8em;
+    margin-top: 2em;
+    font-size: 1em;
+    h1 {
+      font-size: 2em;
+    }
+    h2{
+      font-size: 1.5em;
+      margin-top: -0.4em;
+    }
+    p{
+      line-height:1.5em;
+    }
+  }
+    .Buttonbar{
+      margin-top: 0;
+      margin-bottom: 4em;
+    }
+    
   }
 
   // S - Tablet
-  @media (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
+    margin: 8em 10% 3em 10%;
 
+    .Infoblock {
+      width: 70%;
+
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.2em;
+        margin-top: -0.5em;
+      }
+      p {
+        font-size: 0.8em;
+      }
+    }
+    .Buttonbar {
+      margin-top: 0;
+      margin-bottom: 1.2em;
+    }
+   
   }
 
   // M - Tablet/Laptop

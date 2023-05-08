@@ -145,6 +145,7 @@ body {
   font-family: "main-text-regular", sans-serif;
   font-size: 0.95rem;
   font-weight: 100;
+  overflow-x: hidden;
 }
 
 /** UTILITY: Colors **/
@@ -345,6 +346,11 @@ img .Lp {
 .ShoppingButton .Arrow {
   margin: 1em 0.5em 1em 0;
 }
+@media (max-width: 480px) {
+  .ShoppingButton .Arrow {
+    margin: 1.1em 0.2em 1em 0;
+  }
+}
 .price {
   border-radius: 30px;
   color: white;
@@ -368,6 +374,18 @@ img .Lp {
 .BlackLogo .Name {
   height: 1.5em;
   margin: 0.4em;
+}
+@media (max-width: 480px) {
+  .BlackLogo .Name {
+    opacity: 0;
+    width: 0.1em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .BlackLogo .Name {
+    height: 1em;
+    margin: 0.6em 0 0.6em 0.6em;
+  }
 }
 
 .WhiteLogo {
@@ -433,6 +451,18 @@ h2 {
 .Input:focus {
   outline: none;
 }
+@media (max-width: 480px) {
+  .Input {
+    width: 85%;
+    margin: 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Input {
+    width: 85%;
+    margin: 0;
+  }
+}
 .Searchbutton {
   border-radius: 100%;
   border: none;
@@ -442,6 +472,17 @@ h2 {
 }
 .Searchbutton img {
   width: 3em;
+}
+@media (max-width: 480px) {
+  .Searchbutton img {
+    width: 2em;
+    height: 2em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Searchbutton {
+    margin-right: 0.5em;
+  }
 }
 a {
   color: white;
@@ -466,7 +507,7 @@ nav .Navbar .shopButton {
   position: relative;
 }
 nav .Navbar .shopButton button {
-  margin: 0.2em 2em;
+  margin: 0.2em 0.5em;
 }
 nav .Navbar .shopButton h5 {
   position: absolute;
@@ -488,27 +529,47 @@ nav .Iconbutton {
   padding: 0.3em;
   margin-right: 1em;
 }
+@media (max-width: 480px) {
+  nav {
+    padding: 0.5em 5%;
+  }
+  nav .Iconbutton {
+    margin-right: 0.2em;
+  }
+  nav .shopButton {
+    margin-left: -8.5em;
+    margin-right: 0.2em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  nav {
+    width: 100%;
+    padding: 0.5em 5%;
+  }
+  nav .shopButton {
+    margin-left: -8.5em;
+    margin-right: 0.5em;
+  }
+}
 .Banner {
   background-image: url("runtime-records-backdrop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden !important;
   margin-top: 0;
   padding: 10em 20%;
   color: white;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .Banner h5 {
   margin-bottom: 2em;
 }
 .Banner .Infoblock {
-  width: 50%;
+  width: 100%;
 }
 .Banner .BannerLp {
   position: relative;
-  margin-left: 1em;
-}
-.Banner .BannerLp .Lp {
-  width: 30em;
 }
 .Banner .Buttonbar {
   margin: 0;
@@ -528,6 +589,69 @@ nav .Iconbutton {
   font-size: 1.5em;
   margin: 0 0.7em;
   padding: 0.5em 0;
+}
+@media (max-width: 480px) {
+  .Banner {
+    display: block;
+    padding: 5em 5% 2em 5%;
+    margin: 0;
+  }
+  .Banner .Infoblock {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .Banner h1 {
+    font-size: 1.5em;
+  }
+  .Banner h2 {
+    font-size: 1em;
+  }
+  .Banner p {
+    font-size: 0.9em;
+    line-height: 1.7em;
+  }
+  .Banner .BannerLp {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .Banner .Buttonbar {
+    gap: 2em;
+    margin-top: 1em;
+    width: 90%;
+    margin: 0 5%;
+    justify-content: space-between;
+  }
+  .Banner .Buttonbar .Arrow {
+    margin: 0 0.2em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Banner {
+    padding: 7em 5% 4em 5%;
+    gap: 2em;
+    width: 100%;
+  }
+  .Banner h1 {
+    font-size: 1.8em;
+  }
+  .Banner h2 {
+    font-size: 1em;
+  }
+  .Banner h5 {
+    margin-bottom: 1em;
+  }
+  .Banner p {
+    font-size: 0.8em;
+    line-height: 1.7em;
+  }
+  .Banner .Buttonbar {
+    gap: 5em;
+    margin-top: 0;
+  }
+  .Banner .Bannerlp {
+    width: 80%;
+    margin: 0;
+  }
 }
 .Producttile {
   width: 100%;
@@ -557,6 +681,35 @@ nav .Iconbutton {
   margin-left: 1em;
   padding: 0.5em 0;
 }
+@media (max-width: 480px) {
+  .Producttile {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .Producttile h3 {
+    font-size: 1.5em;
+    margin-top: -0.5em;
+  }
+  .Producttile h4 {
+    font-size: 1em;
+  }
+  .Producttile .ShoppingButton {
+    padding: 0;
+    margin-top: -1em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Producttile {
+    margin-top: 0;
+    margin-bottom: -1em;
+  }
+  .Producttile h3 {
+    font-size: 1.4em;
+  }
+  .Producttile h4 {
+    font-size: 1em;
+  }
+}
 .Searchbar {
   border: 2px solid rgba(0, 0, 0, 0.4);
   border-radius: 40px;
@@ -566,12 +719,32 @@ nav .Iconbutton {
   padding-left: 1em;
   display: flex;
   justify-content: baseline;
-  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .Searchbar {
+    width: 90%;
+    margin: 0 5%;
+    height: 3em;
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Searchbar {
+    margin: 0 auto;
+    height: 4em;
+    width: 20em;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .Searchbar {
+    margin: 0 auto;
+  }
 }
 .Filter .buttons {
   display: flex;
   justify-content: flex-end;
   position: relative;
+  overflow-x: hidden !important;
 }
 .Filter button {
   background-color: black;
@@ -607,6 +780,16 @@ nav .Iconbutton {
 }
 .Filter .dropdown ul .last {
   border-bottom: 0;
+}
+@media (max-width: 480px) {
+  .Filter {
+    width: 90%;
+  }
+  .Filter .dropdown {
+    width: 60%;
+    margin: 0 10% 0 30%;
+    justify-content: flex-end;
+  }
 }
 .Footerblock {
   width: 50%;
@@ -670,6 +853,57 @@ nav .Iconbutton {
   width: 3em;
   height: 3em;
 }
+@media (max-width: 480px) {
+  .Details {
+    display: block;
+    margin: 5em 10% 2em 10%;
+  }
+  .Details .BannerLp {
+    width: 100%;
+  }
+  .Details .Infoblock {
+    width: 100%;
+    padding: 0 0.8em;
+    margin-top: 2em;
+    font-size: 1em;
+  }
+  .Details .Infoblock h1 {
+    font-size: 2em;
+  }
+  .Details .Infoblock h2 {
+    font-size: 1.5em;
+    margin-top: -0.4em;
+  }
+  .Details .Infoblock p {
+    line-height: 1.5em;
+  }
+  .Details .Buttonbar {
+    margin-top: 0;
+    margin-bottom: 4em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Details {
+    margin: 8em 10% 3em 10%;
+  }
+  .Details .Infoblock {
+    width: 70%;
+  }
+  .Details .Infoblock h1 {
+    font-size: 2em;
+  }
+  .Details .Infoblock h2 {
+    font-size: 1.2em;
+    margin-top: -0.5em;
+  }
+  .Details .Infoblock p {
+    font-size: 0.8em;
+  }
+  .Details .Buttonbar {
+    margin-top: 0;
+    margin-bottom: 1.2em;
+  }
+}
 .Cartitem {
   margin: 0;
   padding: 2em 0;
@@ -705,6 +939,85 @@ nav .Iconbutton {
   margin: 2em 0;
   size: 5em;
 }
+@media (max-width: 480px) {
+  .Cartitem {
+    padding: 0.7em 1em 0.7em 0;
+    height: 5.5em;
+  }
+  .Cartitem img {
+    width: 4em;
+    height: 4em;
+  }
+  .Cartitem .Iteminfo {
+    gap: 1em;
+    height: 4em;
+  }
+  .Cartitem .Iteminfo .Titles {
+    margin: 0 0.4em;
+    padding: 0.2em 0;
+  }
+  .Cartitem .Iteminfo .Titles h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+  }
+  .Cartitem .Iteminfo .Titles h4 {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+  .Cartitem .options {
+    display: flex;
+    gap: 1.2em;
+    margin: auto 0;
+  }
+  .Cartitem .options .price {
+    font-size: 0.5em;
+    margin: 1.2em 0;
+    width: 5em;
+  }
+  .Cartitem .options .price h5 {
+    font-size: 1.4em;
+  }
+  .Cartitem .options .delete {
+    margin: 1.5em 0;
+    size: 5em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Cartitem {
+    padding: 1.5em 1em 1.5em 0;
+  }
+  .Cartitem img {
+    width: 6em;
+    height: 6em;
+  }
+  .Cartitem .Iteminfo {
+    gap: 2em;
+  }
+  .Cartitem .Iteminfo .Titles {
+    margin: 0 1em;
+    padding: 0.3em 0;
+  }
+  .Cartitem .Iteminfo .Titles h3 {
+    font-size: 1.6em;
+    margin-bottom: 0.2em;
+  }
+  .Cartitem .Iteminfo .Titles h4 {
+    font-size: 1.4em;
+  }
+  .Cartitem .options {
+    display: flex;
+    gap: 1.2em;
+    margin: auto 0;
+  }
+  .Cartitem .options .price {
+    font-size: 0.8em;
+    margin: 0.5em 0;
+  }
+  .Cartitem .options .delete {
+    margin: 2em 0;
+  }
+}
+
 .Total {
   margin: 2em 0%;
 }
@@ -742,6 +1055,50 @@ nav .Iconbutton {
 .Total .Totalprice .price h5 {
   font-size: 2em;
 }
+@media (max-width: 480px) {
+  .Total .Buttonbar {
+    margin-top: 2em;
+    margin-right: 1.5em;
+    gap: 0.8em;
+  }
+  .Total .Buttonbar .shoppingcart {
+    padding: 0.55em 0.5em;
+  }
+  .Total .Buttonbar .arrow {
+    margin: 0.2em 0;
+  }
+  .Total .Totalprice .price {
+    padding: 1em 0.6em;
+    margin-top: -1em;
+    border-radius: 70px;
+    width: 4em;
+    height: 4em;
+    margin-right: 1.5em;
+  }
+  .Total .Totalprice .price h5 {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Total .Buttonbar {
+    margin-top: 3em;
+    gap: 1em;
+  }
+  .Total .Buttonbar .arrow {
+    margin: 0.2em 0;
+  }
+  .Total .Totalprice .price {
+    padding: 1.6em 1em;
+    border-radius: 70px;
+    width: 6em;
+    height: 6em;
+    margin-right: 1em;
+  }
+  .Total .Totalprice .price h5 {
+    font-size: 1.7em;
+  }
+}
+
 .Productsection {
   width: 80%;
   margin: 0 10%;
@@ -757,27 +1114,89 @@ nav .Iconbutton {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 480px) {
+  .Productsection .Products {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Productsection .Products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 footer {
-  padding: 3em 10%;
+  padding: 3em 20%;
   margin-top: 5em;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3em;
   background-color: black;
   color: white;
 }
 footer .footertext {
   display: flex;
-  width: 50%;
+  gap: 6em;
 }
 footer h3 {
   font-size: 1.4em;
 }
+@media (max-width: 480px) {
+  footer {
+    grid-template-columns: 1fr;
+    padding: 10%;
+  }
+  footer .footertext {
+    gap: 1em;
+    font-size: 0.7em;
+    margin: 0;
+    padding: 0;
+  }
+  footer .footertext h3 {
+    font-size: 1em;
+  }
+  footer .OrangeLogo {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  footer {
+    padding: 3em 10%;
+  }
+  footer .footertext {
+    gap: 1em;
+    font-size: 0.7em;
+    padding: 0;
+  }
+  footer .footertext h3 {
+    font-size: 1.5em;
+  }
+}
 .Filterbar {
-  display: flex;
-  justify-content: flex-end;
   width: 60%;
   margin: 3em auto;
+}
+@media (max-width: 480px) {
+  .Filterbar {
+    width: 100%;
+    display: block;
+    overflow-x: hidden !important;
+    margin: 2em 0 3em 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .Filterbar {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2em auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Filterbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3em;
+  }
 }
 .Suggested {
   display: grid;
@@ -786,6 +1205,32 @@ footer h3 {
   align-items: center;
   width: 80%;
   margin: 0 10%;
+}
+@media (max-width: 480px) {
+  .Suggested {
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    margin: 0;
+    padding: 0 5%;
+    width: 100%;
+  }
+  .Suggested h3 {
+    font-size: 1.2em;
+  }
+  .Suggested h4 {
+    font-size: 0.8em;
+  }
+  .Suggested h5 {
+    font-size: 0.6em;
+  }
+  .Suggested .price h5 {
+    font-size: 1em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Suggested {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .Menu {
   position: fixed;
@@ -807,11 +1252,52 @@ footer h3 {
   border-bottom: 1px solid black;
   padding: 0.5em 0;
 }
+@media (max-width: 480px) {
+  .Menu {
+    top: 3.3em;
+  }
+  .Menu .menuitems {
+    margin: 0.8em 20%;
+  }
+  .Menu .menuitems h1 {
+    font-size: 2.5em;
+    padding: 0.9em 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Menu {
+    top: 3em;
+  }
+  .Menu .menuitems {
+    margin: 2em 20%;
+  }
+  .Menu .menuitems h1 {
+    font-size: 2.5em;
+    padding: 0.8em 0;
+  }
+}
 .Home {
   font-size: 1.2em;
 }
 .Shoppingcart {
   padding: 5em 20% 5em 20%;
+}
+@media (max-width: 480px) {
+  .Shoppingcart {
+    padding: 5em 5% 0 5%;
+  }
+  .Shoppingcart h1 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .Shoppingcart {
+    padding-bottom: 0;
+  }
+  .Shoppingcart h1 {
+    font-size: 2em;
+  }
 }
 .Shadow {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);

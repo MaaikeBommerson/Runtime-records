@@ -10,6 +10,22 @@
       height: 1.5em;
       margin: 0.4em;
     }
+
+     // XS - Phone
+   @media (max-width: 480px) {
+    .Name {
+      opacity: 0;
+      width: 0.1em;
+    }
+  }
+
+  // S - Tablet
+  @media (min-width: 481px) and (max-width: 768px) {
+    .Name {
+      height: 1em;
+      margin: 0.6em 0 0.6em 0.6em;
+    }
+  }
 }
 
 .WhiteLogo {
@@ -31,10 +47,13 @@
   display: flex;
   margin: 2em 0;
 
+
+
   .Logo {
     margin: 0.2em;
   }
   .Name {
     margin: 0.4em;
   }
+
 }

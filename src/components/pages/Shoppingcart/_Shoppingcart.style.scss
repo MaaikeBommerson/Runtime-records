@@ -4,12 +4,20 @@ padding: 5em 20% 5em 20%;
 
   // XS - Phone
   @media (max-width: 480px) {
-
+    padding: 5em 5% 0 5%;
+  
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
   }
 
   // S - Tablet
-  @media (max-width: 768px) {
-
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding-bottom: 0;
+    h1{
+      font-size: 2em;
+    }
   }
 
   // M - Tablet/Laptop

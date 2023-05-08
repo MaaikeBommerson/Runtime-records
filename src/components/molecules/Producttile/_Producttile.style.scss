@@ -30,16 +30,38 @@
     font-size: 1em;
     margin-left: 1em;
     padding: 0.5em 0;
+    
   }
 
   // XS - Phone
   @media (max-width: 480px) {
-
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    h3 {
+      font-size: 1.5em;
+      margin-top: -0.5em;
+    }
+    h4 {
+      font-size: 1em;
+    }
+    .ShoppingButton {
+      padding: 0;
+      margin-top: -1em;
+    }
   }
 
   // S - Tablet
-  @media (max-width: 768px) {
-
+  @media (min-width: 481px) and (max-width: 768px) {
+    margin-top: 0;
+    margin-bottom: -1em;
+    h3 {
+      font-size: 1.4em;
+    }
+    h4 {
+      font-size:1em;
+    }
+    
   }
 
   // M - Tablet/Laptop

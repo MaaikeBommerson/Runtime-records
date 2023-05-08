@@ -8,7 +8,7 @@ nav {
   z-index: 1;
   top: 0;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
  
   .Navbar {
     height: 2em;
@@ -19,7 +19,7 @@ nav {
     position: relative;
   
     button {
-      margin: 0.2em 2em;
+      margin: 0.2em 0.5em;
     }
 
     h5 {
@@ -50,16 +50,28 @@ nav {
     margin-right: 1em;
   }
 
-
-
   // XS - Phone
   @media (max-width: 480px) {
+    padding: 0.5em 5%;
 
+    .Iconbutton {
+      margin-right: 0.2em;
+    }
+    .shopButton {
+      margin-left: -8.5em;
+      margin-right: 0.2em;
+    }
   }
 
   // S - Tablet
-  @media (max-width: 768px) {
-
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 100%;
+    padding: 0.5em 5%;
+    
+    .shopButton {
+      margin-left: -8.5em;
+      margin-right: 0.5em;
+    }
   }
 
   // M - Tablet/Laptop

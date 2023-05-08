@@ -13,7 +13,7 @@ const Filterbar = ({data}) => {
             <Filter data= {data}/>
         </div>
     )
-
+ 
 }
 
 /// TODO: add more utility classes if needed!

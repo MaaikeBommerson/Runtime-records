@@ -10,12 +10,30 @@
 
   // XS - Phone
   @media (max-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    margin: 0;
+    padding: 0 5%;
+    width: 100%;
+   
+    h3 {
+      font-size: 1.2em;
+    }
+    h4 {
+      font-size: 0.8em;
+    }
+    h5 {
+      font-size: 0.6em;
+    }
 
+    .price h5 {
+      font-size: 1em;
+    }
   }
 
   // S - Tablet
-  @media (max-width: 768px) {
-
+  @media (min-width: 481px) and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   // M - Tablet/Laptop

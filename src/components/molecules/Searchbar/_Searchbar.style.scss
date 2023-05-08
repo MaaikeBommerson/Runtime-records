@@ -8,22 +8,27 @@
 
   display: flex;
   justify-content: baseline;
-  margin: 0 auto;
+  
 
 
   // XS - Phone
   @media (max-width: 480px) {
-
+    width: 90%;
+    margin: 0 5%;
+    height: 3em;
+    margin-bottom: 1em;
   }
 
   // S - Tablet
-  @media (max-width: 768px) {
-
+  @media (min-width: 481px) and (max-width: 768px) {
+    margin: 0 auto;
+    height: 4em;
+    width: 20em;
   }
 
   // M - Tablet/Laptop
-  @media (max-width: 1024px) {
-
+  @media (min-width: 769px) and (max-width: 1024px) {
+    margin: 0 auto;
   }
 
   // L - High Res

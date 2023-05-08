@@ -44,27 +44,91 @@
 
   // XS - Phone
   @media (max-width: 480px) {
+    padding: 0.7em 1em 0.7em 0;
+    height: 5.5em;
 
+    img {
+      width: 4em;
+      height: 4em;
+    }
+    .Iteminfo {
+      gap: 1em;
+      height: 4em;
+      .Titles {
+        margin: 0 0.4em;
+        padding: 0.2em 0;
+
+        h3 {
+          font-size: 1.2em;
+          margin-bottom: 0.2em;
+        }
+        h4 {
+          font-size: 1em;
+          margin-bottom: 0;
+
+        }
+      }
+    }
+    .options {
+      display: flex;
+      gap: 1.2em;
+      margin: auto 0;
+  
+      .price {
+        font-size: 0.5em;
+        margin: 1.2em 0;
+        width: 5em;
+  
+        h5 {
+          font-size: 1.4em;
+        }
+      }
+      .delete {
+        margin:1.5em 0;
+        size: 5em;
+      }
   }
+}
 
   // S - Tablet
-  @media (max-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding: 1.5em 1em 1.5em 0;
 
+    img {
+      width: 6em;
+      height: 6em;
+    }
+   
+    .Iteminfo {
+      gap: 2em;
+  
+      .Titles {
+        margin: 0 1em;
+        padding: 0.3em 0;
+
+        h3 {
+          font-size: 1.6em;
+          margin-bottom: 0.2em;
+        }
+
+        h4 {
+          font-size: 1.4em;
+        }
+      }
+    }
+    .options {
+      display: flex;
+      gap: 1.2em;
+      margin: auto 0;
+
+      .price{
+        font-size: 0.8em;
+        margin: 0.5em 0;
+      }
+      .delete {
+        margin:2em 0;
+      }
+  }
   }
 
-  // M - Tablet/Laptop
-  @media (max-width: 1024px) {
-
   }
-
-  // L - High Res
-  @media (max-width: 1200px) {
-
-  }
-
-  // XL - Ultra High Res
-  @media (min-width: 1201px) {
-
-  }
-
-}
