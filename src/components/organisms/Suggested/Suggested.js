@@ -4,13 +4,22 @@ import PropTypes from 'prop-types'
 import Producttile from '../../molecules/Producttile'
 
 /// TODO: Define props for Suggested
-const Suggested = ({data}) => {
+const Suggested = ({data, category}) => {
+
+    // Filterfunctie die filtert op de category van het detail deel
+    // random math ding die random objecten uit het array haalt
+    // while loop die een array maakt van 4 objecten
+
+    const c = data.filter( record => record.category === 'Heavy metal')
+                
+    c.sort(() => Math.random() - 0.5)
+    .slice(0,4)
+
+    // Hij laat nu wel ook het huidige product zien, dit moet eigenlijk niet.
 
     return(
         <div className='Suggested'>
-            {data.map((record, index)=> {
-                //hier moet een while loop in toegevoegd 
-                //worden zodat hij bij de 4 producten stopt
+            {c.map((record, index)=> {
                     return(
                         <Producttile record={record} key={index}/>
                     )

@@ -22,7 +22,7 @@ const Detail = ({data}) => {
     return( 
         <>
         <Details data={currentRecord}/>
-        <Suggested data= {data}/>
+        <Suggested data= {data} category={currentRecord.category}/>
         </>
     )
 
