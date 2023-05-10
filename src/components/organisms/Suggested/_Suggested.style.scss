@@ -33,7 +33,28 @@
 
   // S - Tablet
   @media (min-width: 481px) and (max-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0 5%;
+    width: 100%;
+
+    h3 {
+      font-size: 1.2em;
+    }
+    h4 {
+      font-size: 0.8em;
+      margin-bottom: 0;
+      width: 100%;
+    }
+    h5 {
+      font-size: 0.6em;
+      
+    }
+    .price h5 {
+      font-size: 1em;
+    }
+    
+
   }
 
   // M - Tablet/Laptop

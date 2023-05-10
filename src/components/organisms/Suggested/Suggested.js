@@ -17,6 +17,7 @@ const Suggested = ({data, category}) => {
 
     // Hij laat nu wel ook het huidige product zien, dit moet eigenlijk niet.
 
+    console.log(c)
     return(
         <div className='Suggested'>
             {c.map((record, index)=> {

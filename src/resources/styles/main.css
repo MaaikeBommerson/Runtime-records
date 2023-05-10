@@ -701,13 +701,21 @@ nav .Iconbutton {
 @media (min-width: 481px) and (max-width: 768px) {
   .Producttile {
     margin-top: 0;
-    margin-bottom: -1em;
+    margin-bottom: 0;
   }
   .Producttile h3 {
     font-size: 1.4em;
   }
   .Producttile h4 {
     font-size: 1em;
+  }
+  .Producttile .Shopitem {
+    display: block;
+  }
+  .Producttile .Shopitem .ShoppingButton {
+    padding: 0;
+    margin-top: 0;
+    justify-content: end;
   }
 }
 .Searchbar {
@@ -1229,7 +1237,24 @@ footer h3 {
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .Suggested {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0 5%;
+    width: 100%;
+  }
+  .Suggested h3 {
+    font-size: 1.2em;
+  }
+  .Suggested h4 {
+    font-size: 0.8em;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .Suggested h5 {
+    font-size: 0.6em;
+  }
+  .Suggested .price h5 {
+    font-size: 1em;
   }
 }
 .Menu {

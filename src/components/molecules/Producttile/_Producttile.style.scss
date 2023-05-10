@@ -54,14 +54,24 @@
   // S - Tablet
   @media (min-width: 481px) and (max-width: 768px) {
     margin-top: 0;
-    margin-bottom: -1em;
+    margin-bottom: 0;
     h3 {
       font-size: 1.4em;
     }
     h4 {
       font-size:1em;
+      
     }
-    
+    .Shopitem {
+      display: block;
+      
+      
+      .ShoppingButton {
+        padding: 0;
+        margin-top: 0;
+        justify-content:end;
+      }
+    }
   }
 
   // M - Tablet/Laptop
