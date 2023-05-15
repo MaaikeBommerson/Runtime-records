@@ -17,18 +17,14 @@ import Image from '../../atoms/Image'
 /// TODO: Define props for Banner
 const Banner = ({data}) => {
 
-    const bannerRecord = data[2]
+    const bannerRecord = data[Math.floor(Math.random()* data.length)]
 
     return(
     <div className='Banner'>
         <div className='Infoblock'>
-            <Header2 text= {bannerRecord.band}/>
+            <Header2 text= {bannerRecord.artist}/>
             <Header1 text={bannerRecord.title}/>
-            <Paragraph content='This blistering punk-rock debut from a 55-year-old 
-                            veteran of the scene delivers urgent music for 
-                            evergreen unease. These are weary, angry songs, 
-                            crafted with an insatiable verve and an almost
-                            triumphant fury.' />
+            <Paragraph content={bannerRecord.info} />
             <Subtitle text= {bannerRecord.category}/>
             <div className='Buttonbar'>
                 <ShoppingButton data= {bannerRecord}/>
@@ -39,7 +35,7 @@ const Banner = ({data}) => {
         </div>
         <div className='BannerLp'>
             <PriceTag price= {bannerRecord.price} />
-            <Image className='Lp' src='https://media.s-bol.com/NPOyPV94QX2/1200x898.jpg'/>
+            <Image className='Lp' src= {bannerRecord.img}/>
         </div>
     </div>   
     )

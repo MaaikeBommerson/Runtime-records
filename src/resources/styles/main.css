@@ -332,6 +332,7 @@ button {
 
 img {
   border-radius: 10px;
+  width: 100%;
 }
 img .Cover {
   height: 10em;
@@ -557,7 +558,7 @@ nav .Iconbutton {
   background-size: cover;
   overflow-x: hidden !important;
   margin-top: 0;
-  padding: 10em 20%;
+  padding: 10em 20% 5em 20%;
   color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -565,11 +566,15 @@ nav .Iconbutton {
 .Banner h5 {
   margin-bottom: 2em;
 }
+.Banner h1 {
+  font-size: 2.5em;
+}
 .Banner .Infoblock {
   width: 100%;
 }
 .Banner .BannerLp {
   position: relative;
+  margin-left: 3em;
 }
 .Banner .Buttonbar {
   margin: 0;
@@ -666,6 +671,9 @@ nav .Iconbutton {
   width: 3em;
   height: 3em;
 }
+.Producttile h3 {
+  font-size: 1.3em;
+}
 .Producttile h4 {
   font-size: 1.2em;
 }
@@ -726,7 +734,7 @@ nav .Iconbutton {
   padding: 0;
   padding-left: 1em;
   display: flex;
-  justify-content: baseline;
+  margin: 0 auto;
 }
 @media (max-width: 480px) {
   .Searchbar {
@@ -857,9 +865,12 @@ nav .Iconbutton {
   position: absolute;
   top: -1em;
   left: -1em;
-  padding: 0.7em 0.3em;
-  width: 3em;
-  height: 3em;
+  padding: 0.9em 0.4em;
+  width: 4em;
+  height: 4em;
+}
+.Details .price h5 {
+  font-size: 1.4em;
 }
 @media (max-width: 480px) {
   .Details {
@@ -1117,10 +1128,28 @@ nav .Iconbutton {
   gap: 3em;
   align-items: center;
 }
-.Productsection .cijfers {
-  margin: 2em auto;
+.Productsection .Pages {
+  font-size: 2em;
   display: flex;
+  margin: 1em auto;
   justify-content: center;
+}
+.Productsection .Pages .Page {
+  margin: 0 0.4em;
+  font-size: 0.6em;
+  cursor: pointer;
+  border-radius: 30px;
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0 0.45em;
+}
+.Productsection .Pages .Page:hover {
+  background-color: #e84e0f;
+  color: white;
+}
+.Productsection .Pages .active {
+  background-color: #e84e0f;
+  color: white;
 }
 @media (max-width: 480px) {
   .Productsection .Products {
@@ -1181,8 +1210,9 @@ footer h3 {
   }
 }
 .Filterbar {
-  width: 60%;
+  width: 80%;
   margin: 3em auto;
+  display: flex;
 }
 @media (max-width: 480px) {
   .Filterbar {

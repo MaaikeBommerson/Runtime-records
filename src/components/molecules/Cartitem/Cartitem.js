@@ -18,10 +18,10 @@ const Cartitem = ({record}) => {
     return(
         <div className='Cartitem'>
             <div className='Iteminfo'>
-                <Image className="Image" src= "https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg"/>
+                <Image className="Image" src= {record.img}/>
                 <div className='Titles'>
                     <Header3 text={record.title} />
-                    <Header4 text= {record.band}/>
+                    <Header4 text= {record.artist}/>
                 </div>
             </div>
             <div className='options'>

@@ -51,8 +51,8 @@ const Filter = ({data}) => {
                     <li onClick= {() => ctx.ResetFilter()}> Geen filter</li>
                     <li onClick= {() => ctx.FilterCategory('Heavy metal')}>Heavy metal</li>
                     <li onClick= {() => ctx.FilterCategory('Rock')}>Rock</li>
-                    <li onClick= {() => ctx.FilterCategory('Heavy metal')}>Niet bestaand</li>
-                    <li className= 'last' onClick= {() => ctx.FilterCategory('Heavy metal')}>Niet bestaand</li>
+                    <li onClick= {() => ctx.FilterCategory('Death metal')}>Death metal</li>
+                    <li className= 'last' onClick= {() => ctx.FilterCategory('Overig')}>Overig</li>
                 </ul>
             </div>
             <div className='dropdown'

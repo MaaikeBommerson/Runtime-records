@@ -20,22 +20,16 @@ const Details = ({data}) => {
         <div className='Details'>
             <div className='BannerLp'>
             <PriceTag price= {data && data.price} />
-            <Image className='Lp' src='https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg'/>
+            <Image className='Lp' src= {data.img}/>
             </div>
             <div className='Infoblock'>
                 <Header1 text= {data && data.title}/>
-                <Header2 text= {data && data.band}/>
+                <Header2 text= {data && data.artist}/>
                 <Subtitle text= {data && data.category}/>
 
-                <Paragraph content='This blistering punk-rock debut from a 55-year-old 
-                            veteran of the scene delivers urgent music for 
-                            evergreen unease. These are weary, angry songs, 
-                            crafted with an insatiable verve and an almost
-                            triumphant fury.' />
+                <Paragraph content= {data.info} />
 
-                <Paragraph content='This blistering punk-rock debut from a 55-year-old 
-                            veteran of the scene delivers urgent music for 
-                            evergreen unease.' />
+                <Paragraph content= {data.info2} />
 
                 <div className='Buttonbar fg-highlight'>
                 <h4 >Add to cart</h4>

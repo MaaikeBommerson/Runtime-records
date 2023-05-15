@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import useDatabase from './hooks/useDatabase'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './resources/styles/main.css'
 
@@ -10,9 +11,14 @@ import Navigation from "./components/organisms/Navigation"
 import ShoppingCartContext from './contexts'
 import { filterContext } from "./contexts"
 
-
 const App = () => {
+  const [data, isLoaded] = useDatabase("records")
+  const [filtered, setFiltered] = useState([])
 
+
+  useEffect( () => {
+    if(isLoaded) setFiltered(data)
+  }, [data])
   
   const records = [
     {id: 1, title: 'covername', band: 'Slint', category: 'Rock', price: 17.50},
@@ -32,7 +38,7 @@ const App = () => {
     setShoppingCartContent([...shoppingCartContent, record])
   }
 
-  const [shoppingcart, setShoppingCart] = useState(records)
+  const [shoppingcart, setShoppingCart] = useState([])
   const removeFromCart =  (recordId) => {
 
     const n = shoppingCartContent.filter( item => item.id !== recordId)
@@ -40,13 +46,13 @@ const App = () => {
   }
 
   // Filteren
-  const [filtered, setFiltered] = useState(records)
+
     const FilterCategory =  (recordCategory) => {
-      const n = records.filter( item => item.category === recordCategory)
+      const n = data.filter( item => item.category === recordCategory)
       setFiltered(n)
     }
     const ResetFilter = () => {
-        setFiltered(records)
+        setFiltered(data)
     }
 
     // Sorteren
@@ -57,7 +63,7 @@ const App = () => {
           setFiltered(s) 
       }
       const ResetSort = () => {
-        setFiltered(records)
+        setFiltered(data)
       }
 
       // Searchbar
@@ -74,20 +80,23 @@ const App = () => {
 
     <BrowserRouter>
       <Routes>
+        { isLoaded &&
         <Route path="/" element={<Navigation />}>
 
-          <Route index element={<Home data={records}/>} />
+          <Route index element={<Home data={data}/>} />
 
-          <Route path="/detail/:id" element={<Detail  data={records} />} />
-          <Route path="/shoppingcart" element={<Shoppingcart data={records}/>} />
-          <Route path="/contact" element={<Detail data={records}/>} />
+          <Route path="/detail/:id" element={<Detail  data={data} />} />
+          <Route path="/shoppingcart" element={<Shoppingcart data={data}/>} />
+          <Route path="/contact" element={<Detail data={data}/>} />
         </Route>
+      }
       </Routes>
     </BrowserRouter >
     </filterContext.Provider>
     </ShoppingCartContext.Provider>
 
-  )
+
+ )
 }
 
 export default App;

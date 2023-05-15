@@ -9,13 +9,12 @@ import Productsection from '../../../components/organisms/Productsection'
 const Home = ({data}) => {
 
   
-
+console.log(data)
 
     return(
     <>
       <Banner data= {data}/>
-      <Filterbar data= {data}/>
-
+     <Filterbar data= {data}/>
       <Productsection data={data}/>
 
     </>

@@ -1,9 +1,7 @@
 .Filterbar {
-  width: 60%;
+  width: 80%;
   margin: 3em auto;
-  
-  
-
+  display: flex;
 
   // XS - Phone
   @media (max-width: 480px) {

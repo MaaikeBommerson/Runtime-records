@@ -16,13 +16,13 @@ const Producttile = ({record}) => {
         <div className= 'Producttile'>
             <Link to= {'/detail/' + record.id} >
                 <PriceTag price={record.price}/>
-                <Image className="Image" src= "https://media.s-bol.com/X63ZDOlyx4zl/550x550.jpg"/>
+                <Image className="Image" src= {record.img}/>
             </Link>
                 <Subtitle text={record.category}/>
                 <Header3 text= {record.title}/>
             
             <div className='Shopitem'> 
-                <Header4 text= {record.band} />
+                <Header4 text= {record.artist} />
                 <ShoppingButton className='orange' data={record}/>
             </div>
         </div>

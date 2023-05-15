@@ -15,7 +15,7 @@ const Detail = ({data}) => {
     
 
     useEffect( () => {
-       const result= data.filter(item => item.id === parseInt(id))
+       const result= data.filter(item => item.id === id)
        setCurrentRecord(result[0])
     }, [id])
 
